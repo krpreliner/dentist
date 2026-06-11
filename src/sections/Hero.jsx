@@ -14,7 +14,7 @@ const Hero = () => {
       
       <div className="container hero-container">
         <div className="hero-content animate-fade-in-up">
-          <div className="badge glass delay-100">✨ Premium Dental Care</div>
+          <div className="badge glass-dark delay-100">✨ Premium Dental Care</div>
           <h1 className="heading-1 text-white delay-200">
             Creating Beautiful Smiles That <span className="text-gradient">Last a Lifetime</span>
           </h1>

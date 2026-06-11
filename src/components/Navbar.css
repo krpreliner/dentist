@@ -24,6 +24,7 @@
 
 .logo-text {
   margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .nav-links {

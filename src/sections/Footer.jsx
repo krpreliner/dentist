@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="footer-col">
             <div className="logo" style={{ marginBottom: '1.5rem' }}>
               <span className="logo-icon text-accent">🦷</span>
-              <span className="logo-text heading-3 text-white">Radiance</span>
+              <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
             </div>
             <p className="text-body" style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem' }}>
               Creating beautiful, confident smiles with advanced technology and compassionate care. Your journey to perfect dental health starts here.

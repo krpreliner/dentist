@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container flex-between">
         <div className="logo">
           <span className="logo-icon text-accent">🦷</span>
-          <span className="logo-text heading-3 text-white">Radiance</span>
+          <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
         </div>
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>

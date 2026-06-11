@@ -5,11 +5,11 @@ import './FloatingActions.css';
 const FloatingActions = () => {
   return (
     <div className="floating-actions">
-      <a href="tel:+919876543210" className="floating-btn phone-btn">
+      <a href="tel:+918696781255" className="floating-btn phone-btn">
         <FaPhoneAlt />
         <span className="tooltip">Call Us</span>
       </a>
-      <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="floating-btn whatsapp-btn">
+      <a href="https://wa.me/918696781255" target="_blank" rel="noreferrer" className="floating-btn whatsapp-btn">
         <FaWhatsapp />
         <span className="tooltip">WhatsApp</span>
       </a>

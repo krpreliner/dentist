@@ -43,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaPhoneAlt className="text-accent" />
-                <span>+91 98765 43210</span>
+                <span>+91 8696781255</span>
               </li>
               <li>
                 <FaEnvelope className="text-accent" />

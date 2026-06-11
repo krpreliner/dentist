@@ -34,12 +34,12 @@ const Hero = () => {
           </div>
 
           <div className="hero-buttons delay-300">
-            <button className="btn btn-accent">
+            <a href="#contact" className="btn btn-accent">
               <FaCalendarCheck /> Book Appointment
-            </button>
-            <button className="btn btn-whatsapp">
+            </a>
+            <a href="https://wa.me/918696781255" target="_blank" rel="noreferrer" className="btn btn-whatsapp">
               <FaWhatsapp /> WhatsApp Consultation
-            </button>
+            </a>
           </div>
         </div>
 

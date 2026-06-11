@@ -66,3 +66,24 @@
     display: none;
   }
 }
+
+@media (max-width: 576px) {
+  .nav-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3rem;
+  }
+  .nav-phone {
+    font-size: 0.85rem;
+  }
+  .btn-sm {
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+  .logo-text {
+    font-size: 1.2rem;
+  }
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+}

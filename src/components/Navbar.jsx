@@ -19,10 +19,10 @@ const Navbar = () => {
           <li><a href="#contact">Contact</a></li>
         </ul>
         <div className="nav-actions">
-          <a href="tel:+1234567890" className="nav-phone flex-center">
-            <FaPhoneAlt /> <span className="text-white">+91 98765 43210</span>
+          <a href="tel:+918696781255" className="nav-phone flex-center">
+            <FaPhoneAlt /> <span className="text-white nav-phone-text">+91 8696781255</span>
           </a>
-          <button className="btn btn-accent btn-sm">Book Now</button>
+          <a href="#contact" className="btn btn-accent btn-sm">Book Now</a>
         </div>
       </div>
     </nav>

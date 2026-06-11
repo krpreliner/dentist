@@ -40,7 +40,7 @@ const WhyChooseUs = () => {
     <section className="section why-choose-us" id="about">
       <div className="container">
         <div className="section-header text-center">
-          <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>Why Radiance</div>
+          <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>Why Radiance</div>
           <h2 className="heading-2">Setting the Standard in <span className="text-primary">Dental Excellence</span></h2>
           <p className="text-lead" style={{ maxWidth: '700px', margin: '0 auto' }}>
             We combine world-class medical expertise with premium hospitality to deliver an unmatched dental care experience.

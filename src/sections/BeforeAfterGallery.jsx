@@ -29,7 +29,7 @@ const BeforeAfterGallery = () => {
     <section className="section gallery" id="gallery">
       <div className="container">
         <div className="section-header text-center">
-          <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>Gallery</div>
+          <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>Gallery</div>
           <h2 className="heading-2">Real Smiles. <span className="text-primary">Real Transformations.</span></h2>
           <p className="text-lead" style={{ maxWidth: '700px', margin: '0 auto' }}>
             Slide to see the dramatic improvements achieved by our advanced cosmetic and restorative treatments.

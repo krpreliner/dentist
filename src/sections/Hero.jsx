@@ -16,7 +16,7 @@ const Hero = () => {
         <div className="hero-content animate-fade-in-up">
           <div className="badge glass-dark delay-100">✨ Premium Dental Care</div>
           <h1 className="heading-1 text-white delay-200">
-            Creating Beautiful Smiles That <span className="text-gradient">Last a Lifetime</span>
+            Creating Beautiful Smiles That <span className="text-accent" style={{ textShadow: '2px 4px 8px rgba(0,0,0,0.6)' }}>Last a Lifetime</span>
           </h1>
           <p className="text-lead text-white delay-300" style={{ opacity: 0.9 }}>
             Experience world-class dentistry with Dr. Ruchi Jain. Advanced technology meets compassionate care for a pain-free, perfect smile.

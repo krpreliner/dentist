@@ -9,7 +9,7 @@ const InteractiveFeatures = () => {
     <section className="section interactive-features">
       <div className="container">
         <div className="section-header text-center">
-          <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>Premium Experience</div>
+          <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>Premium Experience</div>
           <h2 className="heading-2">Explore Your <span className="text-primary">Possibilities</span></h2>
         </div>
 

@@ -40,7 +40,7 @@ const Testimonials = () => {
     <section className="section testimonials" id="reviews">
       <div className="container">
         <div className="section-header text-center">
-          <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>Testimonials</div>
+          <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>Testimonials</div>
           <h2 className="heading-2">What Our <span className="text-primary">Patients Say</span></h2>
           <p className="text-lead" style={{ maxWidth: '700px', margin: '0 auto' }}>
             Don't just take our word for it. Discover the life-changing experiences of our valued patients.

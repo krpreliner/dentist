@@ -21,7 +21,7 @@ const MeetDentist = () => {
           </div>
 
           <div className="dentist-content">
-            <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>Meet Your Doctor</div>
+            <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>Meet Your Doctor</div>
             <h2 className="heading-2">Dr. Ruchi Jain</h2>
             <h3 className="heading-3 text-gold" style={{ fontSize: '1.25rem', marginBottom: '1.5rem' }}>BDS • Cosmetic & Implant Specialist</h3>
             

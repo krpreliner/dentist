@@ -20,7 +20,7 @@ const Services = () => {
     <section className="section services" id="services">
       <div className="container">
         <div className="section-header text-center">
-          <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>Our Services</div>
+          <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>Our Services</div>
           <h2 className="heading-2 text-primary">World-Class <span className="text-accent">Dental Treatments</span></h2>
           <p className="text-lead text-text-light" style={{ maxWidth: '700px', margin: '0 auto' }}>
             Comprehensive dental care tailored to your unique needs, delivered with precision and a gentle touch.

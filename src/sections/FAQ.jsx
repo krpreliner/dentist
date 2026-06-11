@@ -36,7 +36,7 @@ const FAQ = () => {
     <section className="section faq">
       <div className="container" style={{ maxWidth: '800px' }}>
         <div className="section-header text-center">
-          <div className="badge text-primary" style={{ backgroundColor: 'var(--color-accent-light)' }}>FAQ</div>
+          <div className="badge text-white" style={{ backgroundColor: 'var(--color-primary)' }}>FAQ</div>
           <h2 className="heading-2">Frequently Asked <span className="text-primary">Questions</span></h2>
         </div>
 

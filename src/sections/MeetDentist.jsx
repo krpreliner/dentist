@@ -33,12 +33,12 @@ const MeetDentist = () => {
               "My mission is to redefine the dental experience, replacing anxiety with comfort, and delivering world-class results that empower my patients with true confidence."
             </p>
 
-            <ul className="achievements-list">
-              <li><span className="check text-success">✓</span> 10+ Years of Clinical Experience</li>
-              <li><span className="check text-success">✓</span> Specialized in Cosmetic Dentistry & Implants</li>
-              <li><span className="check text-success">✓</span> 5000+ Successful Treatments</li>
-              <li><span className="check text-success">✓</span> Member of the Indian Dental Association</li>
-            </ul>
+            <div className="achievements-grid">
+              <div className="achievement-badge"><span className="check text-accent">✓</span> 10+ Years Experience</div>
+              <div className="achievement-badge"><span className="check text-accent">✓</span> Cosmetic & Implants</div>
+              <div className="achievement-badge"><span className="check text-accent">✓</span> 5000+ Treatments</div>
+              <div className="achievement-badge"><span className="check text-accent">✓</span> IDA Member</div>
+            </div>
 
             <div className="signature-container">
               <div className="signature">Ruchi Jain</div>

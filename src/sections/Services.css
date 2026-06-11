@@ -1,6 +1,5 @@
 .services {
-  background-color: var(--color-primary-light);
-  background-image: radial-gradient(circle at 50% 0%, rgba(10, 25, 47, 0.8) 0%, var(--color-primary-light) 70%);
+  background: linear-gradient(180deg, var(--color-white) 0%, var(--color-accent-light) 100%);
   position: relative;
 }
 
@@ -13,16 +12,25 @@
 .service-card {
   padding: 2rem;
   border-radius: var(--border-radius-lg);
-  transition: all var(--transition-normal);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 166, 166, 0.1);
+}
+
+.service-card-white {
+  background-color: var(--color-white);
+}
+
+.service-card-teal {
+  background-color: var(--color-accent-light);
 }
 
 .service-card:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(212, 175, 55, 0.3);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 166, 166, 0.15);
 }
 
 .service-icon {

@@ -1,0 +1,98 @@
+.why-choose-us {
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.why-choose-us::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.05) 0%, transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(10, 25, 47, 0.05) 0%, transparent 40%);
+  z-index: 0;
+}
+
+.section-header {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.4rem 1.2rem;
+  border-radius: var(--border-radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.reason-card {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 4px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform var(--transition-normal);
+  transform-origin: left;
+}
+
+.reason-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-premium), 0 0 30px rgba(212, 175, 55, 0.1);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.reason-card:hover::after {
+  transform: scaleX(1);
+}
+
+.reason-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+  transition: all var(--transition-normal);
+}
+
+.reason-card:hover .reason-icon-wrapper {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.reason-card:hover .reason-icon {
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.reason-icon {
+  transition: transform var(--transition-normal);
+}

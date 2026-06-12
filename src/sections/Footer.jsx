@@ -22,8 +22,12 @@ const Footer = () => {
             </p>
             <div className="social-links">
               <a href="#" className="social-icon"><FaFacebookF /></a>
-              <a href="#" className="social-icon"><FaInstagram /></a>
+              <a href="https://www.instagram.com/drruchijain30" target="_blank" rel="noreferrer" className="social-icon"><FaInstagram /></a>
               <a href="#" className="social-icon"><FaTwitter /></a>
+            </div>
+            <div className="insta-qr" style={{ marginTop: '1.5rem' }}>
+              <p className="text-body" style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem', marginBottom: '0.5rem' }}>Scan to follow us on Instagram</p>
+              <img src="https://i.ibb.co/fYGvqSC6/file-000000000e3c7206bfdd3b0026274915.png" alt="Instagram QR Code" style={{ width: '120px', borderRadius: '8px', border: '2px solid var(--color-accent)' }} />
             </div>
           </div>
 

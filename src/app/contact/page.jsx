@@ -28,7 +28,11 @@ export default function ContactPage() {
 
               <h3 className="heading-3 text-primary">Working Hours</h3>
               <p className="text-body" style={{ marginBottom: '0.5rem' }}><strong>Mon - Sat:</strong> 10:00 AM - 7:00 PM</p>
-              <p className="text-body"><strong>Sunday:</strong> Closed (Emergencies Only)</p>
+              <p className="text-body" style={{ marginBottom: '1.5rem' }}><strong>Sunday:</strong> Closed (Emergencies Only)</p>
+
+              <h3 className="heading-3 text-primary" style={{ marginTop: '1rem' }}>Connect with Dr. Ruchi</h3>
+              <p className="text-body" style={{ marginBottom: '0.5rem' }}>Scan to visit our Instagram page!</p>
+              <img src="https://i.ibb.co/fYGvqSC6/file-000000000e3c7206bfdd3b0026274915.png" alt="Instagram QR Code" style={{ width: '120px', borderRadius: '8px', border: '2px solid var(--color-primary)' }} />
             </div>
             
             <div className="map-container" style={{ borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}>

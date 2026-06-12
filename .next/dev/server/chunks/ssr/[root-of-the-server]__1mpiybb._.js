@@ -348,12 +348,14 @@ const Footer = ()=>{
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                            href: "#",
+                                            href: "https://www.instagram.com/drruchijain30",
+                                            target: "_blank",
+                                            rel: "noreferrer",
                                             className: "social-icon",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                 lineNumber: 25,
-                                                columnNumber: 51
+                                                columnNumber: 122
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
@@ -378,6 +380,44 @@ const Footer = ()=>{
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                     lineNumber: 23,
                                     columnNumber: 13
+                                }, ("TURBOPACK compile-time value", void 0)),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "insta-qr",
+                                    style: {
+                                        marginTop: '1.5rem'
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            className: "text-body",
+                                            style: {
+                                                color: 'rgba(255,255,255,0.7)',
+                                                fontSize: '0.9rem',
+                                                marginBottom: '0.5rem'
+                                            },
+                                            children: "Scan to follow us on Instagram"
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                            lineNumber: 29,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                            src: "https://i.ibb.co/fYGvqSC6/file-000000000e3c7206bfdd3b0026274915.png",
+                                            alt: "Instagram QR Code",
+                                            style: {
+                                                width: '120px',
+                                                borderRadius: '8px',
+                                                border: '2px solid var(--color-accent)'
+                                            }
+                                        }, void 0, false, {
+                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                            lineNumber: 30,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0))
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                    lineNumber: 28,
+                                    columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
@@ -397,7 +437,7 @@ const Footer = ()=>{
                                     children: "Quick Links"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                    lineNumber: 31,
+                                    lineNumber: 35,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -409,12 +449,12 @@ const Footer = ()=>{
                                                 children: "Home"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                lineNumber: 33,
+                                                lineNumber: 37,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 33,
+                                            lineNumber: 37,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -423,12 +463,12 @@ const Footer = ()=>{
                                                 children: "About Us"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                lineNumber: 34,
+                                                lineNumber: 38,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 34,
+                                            lineNumber: 38,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -437,12 +477,12 @@ const Footer = ()=>{
                                                 children: "Our Services"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                lineNumber: 35,
+                                                lineNumber: 39,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 35,
+                                            lineNumber: 39,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -451,12 +491,12 @@ const Footer = ()=>{
                                                 children: "Smile Gallery"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                lineNumber: 36,
+                                                lineNumber: 40,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 36,
+                                            lineNumber: 40,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -465,24 +505,24 @@ const Footer = ()=>{
                                                 children: "Contact"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                lineNumber: 37,
+                                                lineNumber: 41,
                                                 columnNumber: 19
                                             }, ("TURBOPACK compile-time value", void 0))
                                         }, void 0, false, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 37,
+                                            lineNumber: 41,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                    lineNumber: 32,
+                                    lineNumber: 36,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                            lineNumber: 30,
+                            lineNumber: 34,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -497,7 +537,7 @@ const Footer = ()=>{
                                     children: "Contact Info"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                    lineNumber: 42,
+                                    lineNumber: 46,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -509,39 +549,11 @@ const Footer = ()=>{
                                                     className: "text-accent"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 45,
+                                                    lineNumber: 49,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                     children: "Shop No. 518, 5th Floor, Western Business Park, Vesu, Surat, Gujarat - 395007"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 46,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 44,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaPhoneAlt"], {
-                                                    className: "text-accent"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 49,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                    href: "tel:+918696781255",
-                                                    style: {
-                                                        color: 'var(--color-accent)',
-                                                        textDecoration: 'none',
-                                                        fontWeight: 'bold'
-                                                    },
-                                                    children: "+91 8696781255"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 50,
@@ -555,11 +567,39 @@ const Footer = ()=>{
                                         }, ("TURBOPACK compile-time value", void 0)),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                             children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaEnvelope"], {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaPhoneAlt"], {
                                                     className: "text-accent"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 53,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "tel:+918696781255",
+                                                    style: {
+                                                        color: 'var(--color-accent)',
+                                                        textDecoration: 'none',
+                                                        fontWeight: 'bold'
+                                                    },
+                                                    children: "+91 8696781255"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                                    lineNumber: 54,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                            lineNumber: 52,
+                                            columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaEnvelope"], {
+                                                    className: "text-accent"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                                    lineNumber: 57,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -572,25 +612,25 @@ const Footer = ()=>{
                                                     children: "drruchijain30@gmail.com"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 54,
+                                                    lineNumber: 58,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0))
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 52,
+                                            lineNumber: 56,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                    lineNumber: 43,
+                                    lineNumber: 47,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                            lineNumber: 41,
+                            lineNumber: 45,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -605,7 +645,7 @@ const Footer = ()=>{
                                     children: "Working Hours"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                    lineNumber: 60,
+                                    lineNumber: 64,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -617,33 +657,11 @@ const Footer = ()=>{
                                                     className: "text-accent"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 63,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Mon - Sat: 10:00 AM - 7:00 PM"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 64,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 62,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaClock"], {
-                                                    className: "text-accent"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 67,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Sunday: Closed (Emergencies Only)"
+                                                    children: "Mon - Sat: 10:00 AM - 7:00 PM"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 68,
@@ -654,17 +672,39 @@ const Footer = ()=>{
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                             lineNumber: 66,
                                             columnNumber: 15
+                                        }, ("TURBOPACK compile-time value", void 0)),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaClock"], {
+                                                    className: "text-accent"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                                    lineNumber: 71,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0)),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                    children: "Sunday: Closed (Emergencies Only)"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                                    lineNumber: 72,
+                                                    columnNumber: 17
+                                                }, ("TURBOPACK compile-time value", void 0))
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
+                                            lineNumber: 70,
+                                            columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                    lineNumber: 61,
+                                    lineNumber: 65,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                            lineNumber: 59,
+                            lineNumber: 63,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
@@ -683,12 +723,12 @@ const Footer = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                        lineNumber: 76,
+                        lineNumber: 80,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                    lineNumber: 75,
+                    lineNumber: 79,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]

@@ -1,0 +1,232 @@
+/* Admin Global Variables */
+:root {
+  --admin-sidebar-width: 250px;
+  --admin-bg: #f4f6f8;
+  --admin-surface: #ffffff;
+  --admin-primary: #0f4c81;
+  --admin-accent: #00a6a6;
+  --admin-text: #333333;
+  --admin-text-light: #666666;
+  --admin-border: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+}
+
+.admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--admin-bg);
+  font-family: inherit;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: var(--admin-sidebar-width);
+  background-color: var(--admin-surface);
+  border-right: 1px solid var(--admin-border);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  transition: transform 0.3s ease;
+}
+
+.admin-sidebar-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--admin-border);
+}
+
+.admin-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--admin-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.admin-nav {
+  flex: 1;
+  padding: 1rem 0;
+  overflow-y: auto;
+}
+
+.admin-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  color: var(--admin-text-light);
+  text-decoration: none;
+  transition: all 0.2s;
+  font-weight: 500;
+}
+
+.admin-nav-link:hover {
+  background-color: rgba(0, 166, 166, 0.05);
+  color: var(--admin-accent);
+}
+
+.admin-nav-link.active {
+  background-color: rgba(0, 166, 166, 0.1);
+  color: var(--admin-accent);
+  border-right: 3px solid var(--admin-accent);
+}
+
+.admin-nav-icon {
+  font-size: 1.1rem;
+}
+
+.admin-sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid var(--admin-border);
+}
+
+.admin-logout-btn {
+  width: 100%;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid #ff4d4f;
+  color: #ff4d4f;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.admin-logout-btn:hover {
+  background: #ff4d4f;
+  color: white;
+}
+
+/* Main Content */
+.admin-main {
+  flex: 1;
+  margin-left: var(--admin-sidebar-width);
+  padding: 2rem;
+  width: calc(100% - var(--admin-sidebar-width));
+  min-height: 100vh;
+}
+
+.admin-page-header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-page-title {
+  font-size: 1.75rem;
+  color: var(--admin-primary);
+  margin: 0;
+}
+
+/* Admin Cards */
+.admin-card {
+  background: var(--admin-surface);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid var(--admin-border);
+  margin-bottom: 1.5rem;
+}
+
+/* Forms */
+.admin-form-group {
+  margin-bottom: 1rem;
+}
+
+.admin-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--admin-text);
+  font-size: 0.9rem;
+}
+
+.admin-input, .admin-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--admin-border);
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.admin-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Mobile Header */
+.admin-mobile-header {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--admin-surface);
+  border-bottom: 1px solid var(--admin-border);
+  position: sticky;
+  top: 0;
+  z-index: 90;
+}
+
+.admin-menu-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: var(--admin-primary);
+  cursor: pointer;
+}
+
+.admin-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 95;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+  
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+  
+  .admin-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .admin-mobile-header {
+    display: flex;
+  }
+  
+  .admin-overlay {
+    display: block;
+  }
+}

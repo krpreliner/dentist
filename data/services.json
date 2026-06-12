@@ -1,0 +1,86 @@
+[
+  {
+    "id": "root-canal-treatment",
+    "slug": "root-canal-treatment",
+    "title": "Root Canal Treatment",
+    "desc": "Painless microscopic root canal therapy in a single visit.",
+    "icon": "FaSyringe"
+  },
+  {
+    "id": "dental-implants",
+    "slug": "dental-implants",
+    "title": "Dental Implants",
+    "desc": "Permanent, natural-looking tooth replacement.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "teeth-whitening",
+    "slug": "teeth-whitening",
+    "title": "Teeth Whitening",
+    "desc": "Advanced laser whitening for an instantly brighter smile.",
+    "icon": "FaTeeth"
+  },
+  {
+    "id": "smile-makeover",
+    "slug": "smile-makeover",
+    "title": "Smile Makeover",
+    "desc": "Complete redesign of your smile for flawless confidence.",
+    "icon": "FaMagic"
+  },
+  {
+    "id": "braces-aligners",
+    "slug": "braces-aligners",
+    "title": "Braces & Aligners",
+    "desc": "Invisible aligners and traditional braces for perfect alignment.",
+    "icon": "FaAlignLeft"
+  },
+  {
+    "id": "pediatric-dentistry",
+    "slug": "pediatric-dentistry",
+    "title": "Pediatric Dentistry",
+    "desc": "Gentle, friendly care to ensure your child's healthy smile.",
+    "icon": "FaChild"
+  },
+  {
+    "id": "tooth-extraction",
+    "slug": "tooth-extraction",
+    "title": "Tooth Extraction",
+    "desc": "Safe and painless removal of problematic teeth.",
+    "icon": "FaTeeth"
+  },
+  {
+    "id": "dental-crowns-bridges",
+    "slug": "dental-crowns-bridges",
+    "title": "Dental Crowns & Bridges",
+    "desc": "Durable restorations to protect and replace damaged teeth.",
+    "icon": "FaTooth"
+  },
+  {
+    "id": "gum-treatment",
+    "slug": "gum-treatment",
+    "title": "Gum Treatment",
+    "desc": "Advanced laser gum therapy for optimal oral health.",
+    "icon": "FaStethoscope"
+  },
+  {
+    "id": "scaling-polishing",
+    "slug": "scaling-polishing",
+    "title": "Scaling & Polishing",
+    "desc": "Deep cleaning for fresh breath and healthy gums.",
+    "icon": "FaSmile"
+  },
+  {
+    "id": "cosmetic-dentistry",
+    "slug": "cosmetic-dentistry",
+    "title": "Cosmetic Dentistry",
+    "desc": "Transform your smile with premium aesthetic solutions.",
+    "icon": "FaMagic"
+  },
+  {
+    "id": "emergency-dental-care",
+    "slug": "emergency-dental-care",
+    "title": "Emergency Dental Care",
+    "desc": "Priority 24/7 care for severe toothaches and accidents.",
+    "icon": "FaStethoscope"
+  }
+]

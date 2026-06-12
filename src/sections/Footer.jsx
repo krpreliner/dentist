@@ -3,8 +3,11 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAlt, FaEnve
 import './Footer.css';
 
 import Link from 'next/link';
+import { getJsonData } from '../lib/data';
 
 const Footer = () => {
+  const contact = getJsonData('contact');
+
   return (
     <footer className="footer bg-primary">
       <div className="container">
@@ -13,8 +16,8 @@ const Footer = () => {
           <div className="footer-col">
             <div className="logo" style={{ marginBottom: '1.5rem' }}>
               <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <img src="https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg" alt="Radiance Dentistry Logo" style={{ height: '50px', borderRadius: '4px', objectFit: 'cover' }} />
-                <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
+                <img src={contact?.logoUrl || "https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg"} alt={`${contact?.clinicName || 'Radiance Dentistry'} Logo`} style={{ height: '50px', borderRadius: '4px', objectFit: 'cover' }} />
+                <span className="logo-text heading-3 text-white">{contact?.clinicName || 'Radiance Dentistry'}</span>
               </Link>
             </div>
             <p className="text-body" style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem' }}>
@@ -22,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="social-links">
               <a href="#" className="social-icon"><FaFacebookF /></a>
-              <a href="https://www.instagram.com/drruchijain30" target="_blank" rel="noreferrer" className="social-icon"><FaInstagram /></a>
+              <a href={contact?.instagramUrl || "https://www.instagram.com/drruchijain30"} target="_blank" rel="noreferrer" className="social-icon"><FaInstagram /></a>
               <a href="#" className="social-icon"><FaTwitter /></a>
             </div>
             <div className="insta-qr" style={{ marginTop: '1.5rem' }}>
@@ -47,15 +50,15 @@ const Footer = () => {
             <ul className="contact-info">
               <li>
                 <FaMapMarkerAlt className="text-accent" />
-                <span>Shop No. 518, 5th Floor, Western Business Park, Vesu, Surat, Gujarat - 395007</span>
+                <span>{contact?.address || 'Shop No. 518, 5th Floor, Western Business Park, Vesu, Surat, Gujarat - 395007'}</span>
               </li>
               <li>
                 <FaPhoneAlt className="text-accent" />
-                <a href="tel:+918696781255" style={{ color: 'var(--color-accent)', textDecoration: 'none', fontWeight: 'bold' }}>+91 8696781255</a>
+                <a href={`tel:${contact?.phone?.replace(/\s+/g, '')}`} style={{ color: 'var(--color-accent)', textDecoration: 'none', fontWeight: 'bold' }}>{contact?.phone || '+91 8696781255'}</a>
               </li>
               <li>
                 <FaEnvelope className="text-accent" />
-                <a href="mailto:drruchijain30@gmail.com" style={{ color: 'var(--color-accent)', textDecoration: 'underline', fontWeight: 'bold' }}>drruchijain30@gmail.com</a>
+                <a href={`mailto:${contact?.email || 'drruchijain30@gmail.com'}`} style={{ color: 'var(--color-accent)', textDecoration: 'underline', fontWeight: 'bold' }}>{contact?.email || 'drruchijain30@gmail.com'}</a>
               </li>
             </ul>
           </div>
@@ -65,7 +68,7 @@ const Footer = () => {
             <ul className="contact-info">
               <li>
                 <FaClock className="text-accent" />
-                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
+                <span>{contact?.workingHours || 'Mon - Sat: 10:00 AM - 7:00 PM'}</span>
               </li>
               <li>
                 <FaClock className="text-accent" />
@@ -77,7 +80,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Radiance Dentistry. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {contact?.clinicName || 'Radiance Dentistry'}. All rights reserved.</p>
         </div>
       </div>
     </footer>

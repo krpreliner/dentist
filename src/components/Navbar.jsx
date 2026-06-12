@@ -4,14 +4,18 @@ import './Navbar.css';
 
 import Link from 'next/link';
 
+import { getJsonData } from '../lib/data';
+
 const Navbar = () => {
+  const contact = getJsonData('contact');
+
   return (
     <nav className="navbar glass-dark">
       <div className="container flex-between">
         <div className="logo">
           <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <img src="https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg" alt="Radiance Dentistry Logo" style={{ height: '40px', borderRadius: '4px', objectFit: 'cover' }} />
-            <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
+            <img src={contact?.logoUrl || "https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg"} alt={`${contact?.clinicName || 'Radiance Dentistry'} Logo`} style={{ height: '40px', borderRadius: '4px', objectFit: 'cover' }} />
+            <span className="logo-text heading-3 text-white">{contact?.clinicName || 'Radiance Dentistry'}</span>
           </Link>
         </div>
         <ul className="nav-links">
@@ -22,8 +26,8 @@ const Navbar = () => {
           <li><Link href="/contact">Contact</Link></li>
         </ul>
         <div className="nav-actions">
-          <a href="tel:+918696781255" className="nav-phone flex-center">
-            <FaPhoneAlt /> <span className="text-white nav-phone-text">+91 8696781255</span>
+          <a href={`tel:${contact?.phone?.replace(/\s+/g, '')}`} className="nav-phone flex-center">
+            <FaPhoneAlt /> <span className="text-white nav-phone-text">{contact?.phone || '+91 8696781255'}</span>
           </a>
           <Link href="/contact" className="btn btn-accent btn-sm">Book Now</Link>
         </div>

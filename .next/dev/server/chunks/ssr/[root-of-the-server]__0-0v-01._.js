@@ -613,134 +613,62 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/node_modules/react-icons/fa/index.mjs [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/node_modules/next/dist/client/app-dir/link.react-server.js [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$lib$2f$data$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/src/lib/data.js [app-rsc] (ecmascript)");
 ;
 ;
 ;
 ;
 ;
+;
+const iconMap = {
+    FaTeeth: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTeeth"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 8,
+        columnNumber: 12
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaSmile: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaSmile"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 9,
+        columnNumber: 12
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaMagic: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaMagic"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 10,
+        columnNumber: 12
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaSyringe: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaSyringe"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 11,
+        columnNumber: 14
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaTooth: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTooth"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 12,
+        columnNumber: 12
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaChild: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaChild"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 13,
+        columnNumber: 12
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaAlignLeft: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaAlignLeft"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 14,
+        columnNumber: 16
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaCheckDouble: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaCheckDouble"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 15,
+        columnNumber: 18
+    }, ("TURBOPACK compile-time value", void 0)),
+    FaStethoscope: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaStethoscope"], {}, void 0, false, {
+        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+        lineNumber: 16,
+        columnNumber: 18
+    }, ("TURBOPACK compile-time value", void 0))
+};
 const Services = ()=>{
-    const servicesList = [
-        {
-            slug: 'root-canal-treatment',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaSyringe"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 9,
-                columnNumber: 43
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Root Canal Treatment',
-            desc: 'Painless microscopic root canal therapy in a single visit.'
-        },
-        {
-            slug: 'dental-implants',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTooth"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 10,
-                columnNumber: 38
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Dental Implants',
-            desc: 'Permanent, natural-looking tooth replacement.'
-        },
-        {
-            slug: 'teeth-whitening',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTeeth"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 11,
-                columnNumber: 38
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Teeth Whitening',
-            desc: 'Advanced laser whitening for an instantly brighter smile.'
-        },
-        {
-            slug: 'smile-makeover',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaMagic"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 12,
-                columnNumber: 37
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Smile Makeover',
-            desc: 'Complete redesign of your smile for flawless confidence.'
-        },
-        {
-            slug: 'braces-aligners',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaAlignLeft"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 13,
-                columnNumber: 38
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Braces & Aligners',
-            desc: 'Invisible aligners and traditional braces for perfect alignment.'
-        },
-        {
-            slug: 'pediatric-dentistry',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaChild"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 14,
-                columnNumber: 42
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Pediatric Dentistry',
-            desc: 'Gentle, friendly care to ensure your childs healthy smile.'
-        },
-        {
-            slug: 'tooth-extraction',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTeeth"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 15,
-                columnNumber: 39
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Tooth Extraction',
-            desc: 'Safe and painless removal of problematic teeth.'
-        },
-        {
-            slug: 'dental-crowns-bridges',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTooth"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 16,
-                columnNumber: 44
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Dental Crowns & Bridges',
-            desc: 'Durable restorations to protect and replace damaged teeth.'
-        },
-        {
-            slug: 'gum-treatment',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaStethoscope"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 17,
-                columnNumber: 36
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Gum Treatment',
-            desc: 'Advanced laser gum therapy for optimal oral health.'
-        },
-        {
-            slug: 'scaling-polishing',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaSmile"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 18,
-                columnNumber: 40
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Scaling & Polishing',
-            desc: 'Deep cleaning for fresh breath and healthy gums.'
-        },
-        {
-            slug: 'cosmetic-dentistry',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaMagic"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 19,
-                columnNumber: 41
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Cosmetic Dentistry',
-            desc: 'Transform your smile with premium aesthetic solutions.'
-        },
-        {
-            slug: 'emergency-dental-care',
-            icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaStethoscope"], {}, void 0, false, {
-                fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                lineNumber: 20,
-                columnNumber: 44
-            }, ("TURBOPACK compile-time value", void 0)),
-            title: 'Emergency Dental Care',
-            desc: 'Priority 24/7 care for severe toothaches and accidents.'
-        }
-    ];
+    const servicesList = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$lib$2f$data$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getJsonData"])('services') || [];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: "section services",
         id: "services",
@@ -758,7 +686,7 @@ const Services = ()=>{
                             children: "Our Services"
                         }, void 0, false, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                            lineNumber: 27,
+                            lineNumber: 26,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -770,13 +698,13 @@ const Services = ()=>{
                                     children: "Dental Treatments"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 27,
                                     columnNumber: 62
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                            lineNumber: 28,
+                            lineNumber: 27,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -788,13 +716,13 @@ const Services = ()=>{
                             children: "Comprehensive dental care tailored to your unique needs, delivered with precision and a gentle touch."
                         }, void 0, false, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                            lineNumber: 29,
+                            lineNumber: 28,
                             columnNumber: 11
                         }, ("TURBOPACK compile-time value", void 0))
                     ]
                 }, void 0, true, {
                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                    lineNumber: 26,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0)),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -804,10 +732,14 @@ const Services = ()=>{
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     className: "service-icon text-accent",
-                                    children: service.icon
+                                    children: iconMap[service.icon] || /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaTeeth"], {}, void 0, false, {
+                                        fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
+                                        lineNumber: 36,
+                                        columnNumber: 83
+                                    }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                                    lineNumber: 37,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -818,7 +750,7 @@ const Services = ()=>{
                                     children: service.title
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                                    lineNumber: 38,
+                                    lineNumber: 37,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -830,7 +762,7 @@ const Services = ()=>{
                                     children: service.desc
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                                    lineNumber: 39,
+                                    lineNumber: 38,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -839,29 +771,29 @@ const Services = ()=>{
                                     children: "Learn More →"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                                    lineNumber: 40,
+                                    lineNumber: 39,
                                     columnNumber: 15
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]
-                        }, index, true, {
+                        }, service.id || index, true, {
                             fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                            lineNumber: 36,
+                            lineNumber: 35,
                             columnNumber: 13
                         }, ("TURBOPACK compile-time value", void 0)))
                 }, void 0, false, {
                     fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-                    lineNumber: 34,
+                    lineNumber: 33,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
         }, void 0, true, {
             fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-            lineNumber: 25,
+            lineNumber: 24,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/Downloads/DENTIST/src/sections/Services.jsx",
-        lineNumber: 24,
+        lineNumber: 23,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -1388,6 +1320,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$Testimonials$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/src/sections/Testimonials.jsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$MapSection$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/src/sections/MapSection.jsx [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$BookingSection$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/src/sections/BookingSection.jsx [app-rsc] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$lib$2f$data$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/src/lib/data.js [app-rsc] (ecmascript)");
+;
 ;
 ;
 ;
@@ -1397,49 +1331,52 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$
 ;
 ;
 function Home() {
+    const testimonialsData = (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$lib$2f$data$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["getJsonData"])('testimonials') || [];
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$Hero$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 12,
+                lineNumber: 15,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$TrustBar$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 13,
+                lineNumber: 16,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$WhyChooseUs$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 14,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$Services$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 15,
+                lineNumber: 18,
                 columnNumber: 7
             }, this),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$Testimonials$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$Testimonials$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                initialReviews: testimonialsData
+            }, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 16,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$MapSection$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                 compact: true
             }, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 17,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$2f$sections$2f$BookingSection$2e$jsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-                lineNumber: 18,
+                lineNumber: 21,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/Downloads/DENTIST/src/app/page.jsx",
-        lineNumber: 11,
+        lineNumber: 14,
         columnNumber: 5
     }, this);
 }

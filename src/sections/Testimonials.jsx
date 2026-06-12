@@ -3,30 +3,18 @@ import React, { useState, useEffect } from 'react';
 import { FaStar, FaQuoteLeft, FaGoogle } from 'react-icons/fa';
 import './Testimonials.css';
 
-const Testimonials = () => {
-  const reviews = [
+const Testimonials = ({ initialReviews = [] }) => {
+  const defaultReviews = [
     {
       id: 1,
       name: "Aarti Sharma",
       treatment: "Smile Makeover",
       text: "Dr. Ruchi is an artist! I was always self-conscious about my smile, but her smile makeover changed my life. The clinic feels like a premium hotel, and the care is exceptional.",
       rating: 5,
-    },
-    {
-      id: 2,
-      name: "Rahul Verma",
-      treatment: "Dental Implants",
-      text: "I was terrified of the implant procedure, but it was completely pain-free. The advanced technology they use is mind-blowing. Highly recommend Radiance Dentistry.",
-      rating: 5,
-    },
-    {
-      id: 3,
-      name: "Priya Desai",
-      treatment: "Teeth Whitening",
-      text: "Fast, effective, and zero sensitivity. The staff is so welcoming and professional. I walked out with a glowing smile in just one session.",
-      rating: 5,
     }
   ];
+  
+  const reviews = initialReviews.length > 0 ? initialReviews : defaultReviews;
 
   const [activeIndex, setActiveIndex] = useState(0);
 

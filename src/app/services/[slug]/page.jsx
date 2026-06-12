@@ -1,6 +1,9 @@
-import BookingSection from '../../../sections/BookingSection';
+import Link from 'next/link';
 import FAQ from '../../../sections/FAQ';
 import Testimonials from '../../../sections/Testimonials';
+import BookingSection from '../../../sections/BookingSection';
+import { FaCheckCircle } from 'react-icons/fa';
+import { getJsonData } from '../../../lib/data';
 
 export async function generateMetadata({ params }) {
   // Extract slug from params (params is a Promise in Next 15+ but synchronous in 14. We await to be safe)
@@ -13,42 +16,51 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function ServiceDetail({ params }) {
-  const resolvedParams = await params;
-  const slug = resolvedParams.slug;
-  const title = slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+export default async function ServicePage({ params }) {
+  const { slug } = await params;
+  
+  const faqs = getJsonData('faqs') || [];
+  const testimonials = getJsonData('testimonials') || [];
+
+  // If service doesn't exist, we could return a 404, but for now we fallback to generic
+  const service = serviceDetails[slug] || {
+    title: 'Dental Treatment',
+    desc: 'Advanced dental care tailored to your needs.',
+    benefits: ['Expert Care', 'Modern Technology', 'Comfortable Environment']
+  };
 
   return (
     <main>
       <div className="section-header text-center" style={{ paddingTop: '10rem', paddingBottom: '4rem', backgroundColor: 'var(--color-primary-light)' }}>
-        <div className="badge text-white" style={{ backgroundColor: 'var(--color-accent)' }}>Specialized Treatment</div>
-        <h1 className="heading-1 text-white">{title}</h1>
+        <div className="badge text-white" style={{ backgroundColor: 'var(--color-accent)' }}>Service Detail</div>
+        <h1 className="heading-1 text-white">{service.title}</h1>
         <p className="text-lead text-white" style={{ maxWidth: '800px', margin: '0 auto', opacity: 0.9 }}>
-          Experience world-class care and advanced technology for your {title.toLowerCase()} procedure.
+          {service.desc}
         </p>
       </div>
 
-      <section className="section">
-        <div className="container">
-          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className="heading-2">About the Treatment</h2>
-            <p className="text-body" style={{ marginBottom: '2rem' }}>
-              Our {title.toLowerCase()} procedure is designed to provide you with the most comfortable, efficient, and long-lasting results. 
-              We utilize state-of-the-art dental technology combined with Dr. Ruchi Jain's expert precision to restore your perfect smile.
+      <section className="section" style={{ backgroundColor: 'white' }}>
+        <div className="container" style={{ maxWidth: '900px' }}>
+          <h2 className="heading-2 text-primary" style={{ marginBottom: '2rem' }}>Why Choose This Treatment?</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem', marginBottom: '3rem' }}>
+            {service.benefits.map((benefit, idx) => (
+              <div key={idx} style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.5rem', backgroundColor: 'var(--color-background)', borderRadius: '8px' }}>
+                <FaCheckCircle className="text-accent" style={{ fontSize: '1.5rem' }} />
+                <span className="text-body" style={{ fontWeight: 500 }}>{benefit}</span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <p className="text-lead text-text-light" style={{ marginBottom: '2rem' }}>
+              At Radiance Dentistry, Dr. Ruchi Jain uses the latest advancements to ensure this procedure is highly effective, fast, and completely painless.
             </p>
-            <h3 className="heading-3">Key Benefits</h3>
-            <ul style={{ listStylePosition: 'inside', marginBottom: '3rem', fontSize: '1.1rem', lineHeight: '1.8' }}>
-              <li>✨ Painless procedure with advanced local anesthesia</li>
-              <li>✨ Long-lasting, natural-looking results</li>
-              <li>✨ Customized treatment plan tailored to your needs</li>
-              <li>✨ Fast recovery time</li>
-            </ul>
           </div>
         </div>
       </section>
 
-      <Testimonials />
-      <FAQ />
+      <Testimonials initialReviews={testimonials} />
+      <FAQ initialFaqs={faqs} />
       <BookingSection />
     </main>
   );

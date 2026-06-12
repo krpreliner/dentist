@@ -1,13 +1,50 @@
 globalThis.__BUILD_MANIFEST = {
   "pages": {
-    "/_app": []
+    "/_app": [
+      "static/chunks/1qvq_next_dist_compiled_0oo-kkd._.js",
+      "static/chunks/1qvq_next_dist_shared_lib_0n0wr75._.js",
+      "static/chunks/1qvq_next_dist_client_0jbfp3u._.js",
+      "static/chunks/1qvq_next_dist_202xc84._.js",
+      "static/chunks/1qvq_next_app_15l5tfa.js",
+      "static/chunks/[next]_entry_page-loader_ts_0c9ulap._.js",
+      "static/chunks/1qvq_react-dom_1jkg3kx._.js",
+      "static/chunks/1qvq_1hn_bvn._.js",
+      "static/chunks/[root-of-the-server]__1-l-ny6._.js",
+      "static/chunks/Downloads_DENTIST_pages__app_0du2_q-._.js",
+      "static/chunks/turbopack-Downloads_DENTIST_pages__app_13to-s_._.js"
+    ],
+    "/_error": [
+      "static/chunks/1qvq_next_dist_compiled_0oo-kkd._.js",
+      "static/chunks/1qvq_next_dist_shared_lib_10bblky._.js",
+      "static/chunks/1qvq_next_dist_client_0jbfp3u._.js",
+      "static/chunks/1qvq_next_dist_0mqn_so._.js",
+      "static/chunks/[next]_entry_page-loader_ts_0svi214._.js",
+      "static/chunks/1qvq_react-dom_1jkg3kx._.js",
+      "static/chunks/1qvq_1hn_bvn._.js",
+      "static/chunks/[root-of-the-server]__1o59de5._.js",
+      "static/chunks/Downloads_DENTIST_pages__error_0du2_q-._.js",
+      "static/chunks/turbopack-Downloads_DENTIST_pages__error_05na3d3._.js"
+    ]
   },
   "devFiles": [],
-  "polyfillFiles": [],
+  "polyfillFiles": [
+    "static/chunks/1qvq_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
   "lowPriorityFiles": [
     "static/development/_buildManifest.js",
     "static/development/_ssgManifest.js",
     "static/development/_clientMiddlewareManifest.js"
   ],
-  "rootMainFiles": []
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_01rn3no._.js",
+    "static/chunks/1qvq_next_dist_compiled_next-devtools_index_0li5xeg.js",
+    "static/chunks/1qvq_next_dist_compiled_react-dom_0-jxp27._.js",
+    "static/chunks/1qvq_next_dist_compiled_react-server-dom-turbopack_11sv25z._.js",
+    "static/chunks/1qvq_next_dist_compiled_0er-km0._.js",
+    "static/chunks/1qvq_next_dist_client_1vyom1r._.js",
+    "static/chunks/1qvq_next_dist_0qy_nge._.js",
+    "static/chunks/1qvq_@swc_helpers_cjs_1ydw1p9._.js",
+    "static/chunks/Downloads_DENTIST_1anvha4._.js",
+    "static/chunks/turbopack-Downloads_DENTIST_1_21yul._.js"
+  ]
 };

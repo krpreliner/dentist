@@ -13,7 +13,7 @@ const Footer = () => {
           <div className="footer-col">
             <div className="logo" style={{ marginBottom: '1.5rem' }}>
               <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <span className="logo-icon text-accent">🦷</span>
+                <img src="https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg" alt="Radiance Dentistry Logo" style={{ height: '50px', borderRadius: '4px', objectFit: 'cover' }} />
                 <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
               </Link>
             </div>

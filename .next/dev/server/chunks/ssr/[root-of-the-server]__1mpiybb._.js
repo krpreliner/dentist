@@ -88,9 +88,14 @@ const Navbar = ()=>{
                             gap: '10px'
                         },
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "logo-icon text-accent",
-                                children: "🦷"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                src: "https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg",
+                                alt: "Radiance Dentistry Logo",
+                                style: {
+                                    height: '40px',
+                                    borderRadius: '4px',
+                                    objectFit: 'cover'
+                                }
                             }, void 0, false, {
                                 fileName: "[project]/Downloads/DENTIST/src/components/Navbar.jsx",
                                 lineNumber: 13,
@@ -292,9 +297,14 @@ const Footer = ()=>{
                                             gap: '10px'
                                         },
                                         children: [
-                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                className: "logo-icon text-accent",
-                                                children: "🦷"
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                src: "https://i.ibb.co/Xf6zKZkx/IMG-20260612-WA0004.jpg",
+                                                alt: "Radiance Dentistry Logo",
+                                                style: {
+                                                    height: '50px',
+                                                    borderRadius: '4px',
+                                                    objectFit: 'cover'
+                                                }
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                 lineNumber: 16,

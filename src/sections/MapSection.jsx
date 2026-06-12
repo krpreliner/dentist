@@ -3,8 +3,9 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock, FaDirections } from 'r
 import './MapSection.css';
 
 const MapSection = ({ compact = false }) => {
-  const mapEmbedUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m3!1d3721.261946853272!2d72.76865231540026!3d21.141973985937172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04d80509a5659%3A0xc3f1a2df5f479bb!2sWestern%20Business%20Park!5e0!3m2!1sen!2sin!4v1689254823123!5m2!1sen!2sin";
-  const mapLinkUrl = "https://goo.gl/maps/QWvQpGvqSC6pQWvQ9"; // Using a general Google Maps link format, but the user didn't provide a specific shortlink, so we'll link to the coordinates/place.
+  // Using a stable Google Maps embed format that does not require a complex pb string
+  const mapEmbedUrl = "https://maps.google.com/maps?q=Western+Business+Park,+Vesu,+Surat,+Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed";
+  const mapLinkUrl = "https://goo.gl/maps/QWvQpGvqSC6pQWvQ9"; // General fallback
   const actualMapLink = "https://www.google.com/maps/place/Western+Business+Park/@21.1419739,72.7686523,17z/";
 
   return (

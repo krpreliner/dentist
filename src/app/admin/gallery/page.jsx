@@ -25,10 +25,15 @@ export default function GalleryAdmin() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedData),
       });
-      if (res.ok) setMessage('Saved successfully!');
-      else setMessage('Failed to save.');
+      const data = await res.json().catch(() => ({}));
+      
+      if (res.ok) {
+        setMessage('Saved successfully!');
+      } else {
+        setMessage(`Failed to save: ${data.error || res.statusText}`);
+      }
     } catch (err) {
-      setMessage('Error saving data.');
+      setMessage(`Error saving data: ${err.message}`);
     }
     setSaving(false);
   };

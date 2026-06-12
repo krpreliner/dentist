@@ -3,7 +3,8 @@ import { getJsonData, saveJsonData } from '../../../../lib/data';
 
 export async function GET(request, { params }) {
   try {
-    const { model } = params;
+    const resolvedParams = await params;
+    const { model } = resolvedParams;
     const data = getJsonData(model);
     
     if (data === null) {
@@ -18,7 +19,8 @@ export async function GET(request, { params }) {
 
 export async function POST(request, { params }) {
   try {
-    const { model } = params;
+    const resolvedParams = await params;
+    const { model } = resolvedParams;
     const body = await request.json();
     
     await saveJsonData(model, body);

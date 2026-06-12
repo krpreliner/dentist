@@ -2,8 +2,8 @@ import BeforeAfterGallery from '../../sections/BeforeAfterGallery';
 import BookingSection from '../../sections/BookingSection';
 
 export const metadata = {
-  title: 'Smile Gallery | Radiance Dentistry',
-  description: 'See the dramatic improvements achieved by our advanced cosmetic and restorative treatments in our Smile Gallery.',
+  title: 'Smile Transformations | Radiance Dentistry Surat',
+  description: 'See the dramatic improvements achieved by our advanced cosmetic and restorative treatments in our Smile Gallery in Surat.',
 };
 
 export default function GalleryPage() {

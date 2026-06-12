@@ -629,43 +629,107 @@ const BookingSection = ()=>{
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                value: "consultation",
-                                                children: "General Consultation"
+                                                value: "root-canal-treatment",
+                                                children: "Root Canal Treatment (RCT)"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
                                                 lineNumber: 57,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                value: "cosmetic",
-                                                children: "Cosmetic Dentistry"
+                                                value: "dental-implants",
+                                                children: "Dental Implants"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
                                                 lineNumber: 58,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                value: "implants",
-                                                children: "Dental Implants"
+                                                value: "teeth-whitening",
+                                                children: "Teeth Whitening"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
                                                 lineNumber: 59,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                value: "orthodontics",
-                                                children: "Braces / Aligners"
+                                                value: "smile-makeover",
+                                                children: "Smile Makeover"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
                                                 lineNumber: 60,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0)),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
-                                                value: "other",
-                                                children: "Other / Emergency"
+                                                value: "braces-aligners",
+                                                children: "Braces & Aligners"
                                             }, void 0, false, {
                                                 fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
                                                 lineNumber: 61,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "pediatric-dentistry",
+                                                children: "Pediatric Dentistry"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 62,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "tooth-extraction",
+                                                children: "Tooth Extraction"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 63,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "dental-crowns-bridges",
+                                                children: "Dental Crowns & Bridges"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 64,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "gum-treatment",
+                                                children: "Gum Treatment"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 65,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "scaling-polishing",
+                                                children: "Scaling & Polishing"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 66,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "cosmetic-dentistry",
+                                                children: "Cosmetic Dentistry"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 67,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "emergency",
+                                                children: "Emergency Dental Care"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 68,
+                                                columnNumber: 17
+                                            }, ("TURBOPACK compile-time value", void 0)),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("option", {
+                                                value: "other",
+                                                children: "General Consultation / Other"
+                                            }, void 0, false, {
+                                                fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
+                                                lineNumber: 69,
                                                 columnNumber: 17
                                             }, ("TURBOPACK compile-time value", void 0))
                                         ]
@@ -687,12 +751,12 @@ const BookingSection = ()=>{
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
-                                        lineNumber: 65,
+                                        lineNumber: 73,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
-                                    lineNumber: 64,
+                                    lineNumber: 72,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -703,12 +767,12 @@ const BookingSection = ()=>{
                                         rows: "3"
                                     }, void 0, false, {
                                         fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
-                                        lineNumber: 68,
+                                        lineNumber: 76,
                                         columnNumber: 15
                                     }, ("TURBOPACK compile-time value", void 0))
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
-                                    lineNumber: 67,
+                                    lineNumber: 75,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -720,7 +784,7 @@ const BookingSection = ()=>{
                                     children: "Confirm Appointment"
                                 }, void 0, false, {
                                     fileName: "[project]/Downloads/DENTIST/src/sections/BookingSection.jsx",
-                                    lineNumber: 70,
+                                    lineNumber: 78,
                                     columnNumber: 13
                                 }, ("TURBOPACK compile-time value", void 0))
                             ]

@@ -43,15 +43,15 @@ const Footer = () => {
             <ul className="contact-info">
               <li>
                 <FaMapMarkerAlt className="text-accent" />
-                <span>123 Radiance Avenue, Premium Medical Hub, New Delhi, 110001</span>
+                <span>Shop No. 518, 5th Floor, Western Business Park, Vesu, Surat, Gujarat - 395007</span>
               </li>
               <li>
                 <FaPhoneAlt className="text-accent" />
-                <span>+91 8696781255</span>
+                <a href="tel:+918696781255" style={{ color: 'inherit', textDecoration: 'none' }}>+91 8696781255</a>
               </li>
               <li>
                 <FaEnvelope className="text-accent" />
-                <span>hello@radiancedentistry.com</span>
+                <a href="mailto:drruchijain30@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>drruchijain30@gmail.com</a>
               </li>
             </ul>
           </div>
@@ -61,11 +61,7 @@ const Footer = () => {
             <ul className="contact-info">
               <li>
                 <FaClock className="text-accent" />
-                <span>Mon - Fri: 9:00 AM - 8:00 PM</span>
-              </li>
-              <li>
-                <FaClock className="text-accent" />
-                <span>Saturday: 9:00 AM - 5:00 PM</span>
+                <span>Mon - Sat: 10:00 AM - 7:00 PM</span>
               </li>
               <li>
                 <FaClock className="text-accent" />

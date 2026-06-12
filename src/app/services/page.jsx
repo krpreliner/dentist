@@ -2,8 +2,8 @@ import Services from '../../sections/Services';
 import BookingSection from '../../sections/BookingSection';
 
 export const metadata = {
-  title: 'Our Services | Radiance Dentistry',
-  description: 'Explore our world-class dental treatments including Dental Implants, Root Canal, Teeth Whitening, and more.',
+  title: 'Dental Treatments & Services | Radiance Dentistry',
+  description: 'Explore our world-class dental treatments in Surat, including Dental Implants, Root Canal, Teeth Whitening, and more.',
 };
 
 export default function ServicesPage() {

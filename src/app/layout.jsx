@@ -8,8 +8,8 @@ const outfit = Outfit({ subsets: ['latin'], variable: '--font-heading' });
 const inter = Inter({ subsets: ['latin'], variable: '--font-body' });
 
 export const metadata = {
-  title: 'Radiance Dentistry | Premium Dental Care',
-  description: 'Experience world-class dentistry with Dr. Ruchi Jain. Advanced technology meets compassionate care for a pain-free, perfect smile.',
+  title: 'Radiance Dentistry | Best Dental Clinic in Vesu, Surat',
+  description: 'Experience world-class dentistry with Dr. Ruchi Jain in Vesu, Surat. Advanced technology meets compassionate care for a pain-free, perfect smile.',
 };
 
 import SchemaMarkup from '../components/SchemaMarkup';

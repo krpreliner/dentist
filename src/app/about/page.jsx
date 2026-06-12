@@ -3,8 +3,8 @@ import BeforeAfterGallery from '../../sections/BeforeAfterGallery';
 import BookingSection from '../../sections/BookingSection';
 
 export const metadata = {
-  title: 'About Us | Radiance Dentistry',
-  description: 'Learn about our premium clinic, our story, and meet Dr. Ruchi Jain, our lead cosmetic and implant specialist.',
+  title: 'About Dr. Ruchi Jain | Radiance Dentistry Surat',
+  description: 'Learn about our premium clinic in Vesu, Surat, our story, and meet Dr. Ruchi Jain, our lead cosmetic and implant specialist.',
 };
 
 export default function AboutPage() {

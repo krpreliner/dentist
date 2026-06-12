@@ -513,7 +513,7 @@ const Footer = ()=>{
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "123 Radiance Avenue, Premium Medical Hub, New Delhi, 110001"
+                                                    children: "Shop No. 518, 5th Floor, Western Business Park, Vesu, Surat, Gujarat - 395007"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 46,
@@ -534,7 +534,12 @@ const Footer = ()=>{
                                                     lineNumber: 49,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "tel:+918696781255",
+                                                    style: {
+                                                        color: 'inherit',
+                                                        textDecoration: 'none'
+                                                    },
                                                     children: "+91 8696781255"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
@@ -556,8 +561,13 @@ const Footer = ()=>{
                                                     lineNumber: 53,
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "hello@radiancedentistry.com"
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                    href: "mailto:drruchijain30@gmail.com",
+                                                    style: {
+                                                        color: 'inherit',
+                                                        textDecoration: 'none'
+                                                    },
+                                                    children: "drruchijain30@gmail.com"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 54,
@@ -609,7 +619,7 @@ const Footer = ()=>{
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Mon - Fri: 9:00 AM - 8:00 PM"
+                                                    children: "Mon - Sat: 10:00 AM - 7:00 PM"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 64,
@@ -631,7 +641,7 @@ const Footer = ()=>{
                                                     columnNumber: 17
                                                 }, ("TURBOPACK compile-time value", void 0)),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Saturday: 9:00 AM - 5:00 PM"
+                                                    children: "Sunday: Closed (Emergencies Only)"
                                                 }, void 0, false, {
                                                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                                     lineNumber: 68,
@@ -641,28 +651,6 @@ const Footer = ()=>{
                                         }, void 0, true, {
                                             fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
                                             lineNumber: 66,
-                                            columnNumber: 15
-                                        }, ("TURBOPACK compile-time value", void 0)),
-                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["FaClock"], {
-                                                    className: "text-accent"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 71,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0)),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    children: "Sunday: Closed (Emergencies Only)"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                                    lineNumber: 72,
-                                                    columnNumber: 17
-                                                }, ("TURBOPACK compile-time value", void 0))
-                                            ]
-                                        }, void 0, true, {
-                                            fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                                            lineNumber: 70,
                                             columnNumber: 15
                                         }, ("TURBOPACK compile-time value", void 0))
                                     ]
@@ -693,12 +681,12 @@ const Footer = ()=>{
                         ]
                     }, void 0, true, {
                         fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                        lineNumber: 80,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, ("TURBOPACK compile-time value", void 0))
                 }, void 0, false, {
                     fileName: "[project]/Downloads/DENTIST/src/sections/Footer.jsx",
-                    lineNumber: 79,
+                    lineNumber: 75,
                     columnNumber: 9
                 }, ("TURBOPACK compile-time value", void 0))
             ]
@@ -771,18 +759,20 @@ function SchemaMarkup() {
         "@id": "https://radiancedentistry.com",
         "url": "https://radiancedentistry.com",
         "telephone": "+918696781255",
+        "email": "drruchijain30@gmail.com",
         "priceRange": "$$",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Premium Dental Care Center",
-            "addressLocality": "Jaipur",
-            "postalCode": "302001",
+            "streetAddress": "Shop No. 518, 5th Floor, Western Business Park, Vesu",
+            "addressLocality": "Surat",
+            "addressRegion": "Gujarat",
+            "postalCode": "395007",
             "addressCountry": "IN"
         },
         "geo": {
             "@type": "GeoCoordinates",
-            "latitude": 26.9124,
-            "longitude": 75.7873
+            "latitude": 21.1418,
+            "longitude": 72.7709
         },
         "openingHoursSpecification": {
             "@type": "OpeningHoursSpecification",
@@ -794,8 +784,8 @@ function SchemaMarkup() {
                 "Friday",
                 "Saturday"
             ],
-            "opens": "09:00",
-            "closes": "20:00"
+            "opens": "10:00",
+            "closes": "19:00"
         },
         "sameAs": [
             "https://www.facebook.com/radiancedentistry",
@@ -809,7 +799,7 @@ function SchemaMarkup() {
         }
     }, void 0, false, {
         fileName: "[project]/Downloads/DENTIST/src/components/SchemaMarkup.jsx",
-        lineNumber: 45,
+        lineNumber: 47,
         columnNumber: 5
     }, this);
 }
@@ -838,8 +828,8 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$src$
 ;
 ;
 const metadata = {
-    title: 'Radiance Dentistry | Premium Dental Care',
-    description: 'Experience world-class dentistry with Dr. Ruchi Jain. Advanced technology meets compassionate care for a pain-free, perfect smile.'
+    title: 'Radiance Dentistry | Best Dental Clinic in Vesu, Surat',
+    description: 'Experience world-class dentistry with Dr. Ruchi Jain in Vesu, Surat. Advanced technology meets compassionate care for a pain-free, perfect smile.'
 };
 ;
 function RootLayout({ children }) {

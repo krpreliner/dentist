@@ -54,11 +54,19 @@ const BookingSection = () => {
             <div className="form-group">
               <select name="service" required defaultValue="">
                 <option value="" disabled>Select Treatment</option>
-                <option value="consultation">General Consultation</option>
-                <option value="cosmetic">Cosmetic Dentistry</option>
-                <option value="implants">Dental Implants</option>
-                <option value="orthodontics">Braces / Aligners</option>
-                <option value="other">Other / Emergency</option>
+                <option value="root-canal-treatment">Root Canal Treatment (RCT)</option>
+                <option value="dental-implants">Dental Implants</option>
+                <option value="teeth-whitening">Teeth Whitening</option>
+                <option value="smile-makeover">Smile Makeover</option>
+                <option value="braces-aligners">Braces & Aligners</option>
+                <option value="pediatric-dentistry">Pediatric Dentistry</option>
+                <option value="tooth-extraction">Tooth Extraction</option>
+                <option value="dental-crowns-bridges">Dental Crowns & Bridges</option>
+                <option value="gum-treatment">Gum Treatment</option>
+                <option value="scaling-polishing">Scaling & Polishing</option>
+                <option value="cosmetic-dentistry">Cosmetic Dentistry</option>
+                <option value="emergency">Emergency Dental Care</option>
+                <option value="other">General Consultation / Other</option>
               </select>
             </div>
             <div className="form-group">

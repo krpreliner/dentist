@@ -2,12 +2,18 @@ export default function sitemap() {
   const baseUrl = 'https://radiancedentistry.com';
   
   const services = [
-    'dental-implants',
     'root-canal-treatment',
+    'dental-implants',
     'teeth-whitening',
     'smile-makeover',
     'braces-aligners',
-    'pediatric-dentistry'
+    'pediatric-dentistry',
+    'tooth-extraction',
+    'dental-crowns-bridges',
+    'gum-treatment',
+    'scaling-polishing',
+    'cosmetic-dentistry',
+    'emergency-dental-care'
   ];
 
   const serviceUrls = services.map((slug) => ({

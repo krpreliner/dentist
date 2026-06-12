@@ -537,8 +537,9 @@ const Footer = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "tel:+918696781255",
                                                     style: {
-                                                        color: 'inherit',
-                                                        textDecoration: 'none'
+                                                        color: 'var(--color-accent)',
+                                                        textDecoration: 'none',
+                                                        fontWeight: 'bold'
                                                     },
                                                     children: "+91 8696781255"
                                                 }, void 0, false, {
@@ -564,8 +565,9 @@ const Footer = ()=>{
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                                     href: "mailto:drruchijain30@gmail.com",
                                                     style: {
-                                                        color: 'inherit',
-                                                        textDecoration: 'none'
+                                                        color: 'var(--color-accent)',
+                                                        textDecoration: 'underline',
+                                                        fontWeight: 'bold'
                                                     },
                                                     children: "drruchijain30@gmail.com"
                                                 }, void 0, false, {

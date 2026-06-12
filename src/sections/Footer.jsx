@@ -47,11 +47,11 @@ const Footer = () => {
               </li>
               <li>
                 <FaPhoneAlt className="text-accent" />
-                <a href="tel:+918696781255" style={{ color: 'inherit', textDecoration: 'none' }}>+91 8696781255</a>
+                <a href="tel:+918696781255" style={{ color: 'var(--color-accent)', textDecoration: 'none', fontWeight: 'bold' }}>+91 8696781255</a>
               </li>
               <li>
                 <FaEnvelope className="text-accent" />
-                <a href="mailto:drruchijain30@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>drruchijain30@gmail.com</a>
+                <a href="mailto:drruchijain30@gmail.com" style={{ color: 'var(--color-accent)', textDecoration: 'underline', fontWeight: 'bold' }}>drruchijain30@gmail.com</a>
               </li>
             </ul>
           </div>

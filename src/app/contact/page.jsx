@@ -23,8 +23,8 @@ export default function ContactPage() {
               </p>
               
               <h3 className="heading-3 text-primary">Contact Details</h3>
-              <p className="text-body" style={{ marginBottom: '0.5rem' }}><strong>Phone:</strong> <a href="tel:+918696781255" style={{ color: 'inherit' }}>+91 8696781255</a></p>
-              <p className="text-body" style={{ marginBottom: '1.5rem' }}><strong>Email:</strong> <a href="mailto:drruchijain30@gmail.com" style={{ color: 'inherit' }}>drruchijain30@gmail.com</a></p>
+              <p className="text-body" style={{ marginBottom: '0.5rem' }}><strong>Phone:</strong> <a href="tel:+918696781255" style={{ color: 'var(--color-accent)', fontWeight: 'bold', textDecoration: 'none' }}>+91 8696781255</a></p>
+              <p className="text-body" style={{ marginBottom: '1.5rem' }}><strong>Email:</strong> <a href="mailto:drruchijain30@gmail.com" style={{ color: 'var(--color-accent)', fontWeight: 'bold', textDecoration: 'underline' }}>drruchijain30@gmail.com</a></p>
 
               <h3 className="heading-3 text-primary">Working Hours</h3>
               <p className="text-body" style={{ marginBottom: '0.5rem' }}><strong>Mon - Sat:</strong> 10:00 AM - 7:00 PM</p>

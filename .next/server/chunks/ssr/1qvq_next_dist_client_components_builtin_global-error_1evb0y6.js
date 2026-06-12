@@ -1,0 +1,3 @@
+module.exports=[74760,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(6554);a.n(d("[project]/Downloads/DENTIST/node_modules/next/dist/client/components/builtin/global-error.js <module evaluation>"))},90034,(a,b,c)=>{let{createClientModuleProxy:d}=a.r(6554);a.n(d("[project]/Downloads/DENTIST/node_modules/next/dist/client/components/builtin/global-error.js"))},9290,a=>{"use strict";a.i(74760);var b=a.i(90034);a.n(b)},20922,a=>{a.n(a.i(9290))}];
+
+//# sourceMappingURL=1qvq_next_dist_client_components_builtin_global-error_1evb0y6.js.map

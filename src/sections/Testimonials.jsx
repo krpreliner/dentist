@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import { FaStar, FaQuoteLeft, FaGoogle } from 'react-icons/fa';
 import './Testimonials.css';

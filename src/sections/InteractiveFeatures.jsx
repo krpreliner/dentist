@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { FaUpload, FaCalculator, FaClipboardCheck, FaMagic } from 'react-icons/fa';
 import './InteractiveFeatures.css';

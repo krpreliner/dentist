@@ -24,12 +24,66 @@ export function getJsonData(model) {
   }
 }
 
-export function saveJsonData(model, data) {
+export async function saveJsonData(model, data) {
   if (!allowedModels.includes(model)) {
     throw new Error('Invalid model');
   }
 
+  // 1. Save locally for instant updates (works immediately on localhost and current Lambda instance)
   const filePath = path.join(dataDir, `${model}.json`);
-  fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+  const jsonString = JSON.stringify(data, null, 2);
+  fs.writeFileSync(filePath, jsonString, 'utf8');
+
+  // 2. If GitHub Token is present, push a commit to permanently save the changes on Vercel
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER || 'krpreliner';
+  const repo = process.env.GITHUB_REPO || 'dentist';
+
+  if (token) {
+    try {
+      const gitPath = `data/${model}.json`;
+      const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${gitPath}`;
+      
+      // Step A: Get current file SHA (required by GitHub API to update a file)
+      const getRes = await fetch(apiUrl, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      
+      let sha = null;
+      if (getRes.ok) {
+        const fileData = await getRes.json();
+        sha = fileData.sha;
+      }
+
+      // Step B: Commit the new file
+      const contentBase64 = Buffer.from(jsonString).toString('base64');
+      const putRes = await fetch(apiUrl, {
+        method: 'PUT',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: `cms: update ${model} via Admin Panel`,
+          content: contentBase64,
+          sha: sha || undefined
+        })
+      });
+
+      if (!putRes.ok) {
+        console.error('GitHub API Error:', await putRes.text());
+        throw new Error('Failed to push to GitHub');
+      }
+    } catch (err) {
+      console.error('Git CMS push failed:', err);
+      // We don't throw the error so the local write still succeeds, 
+      // but the permanent save will fail silently on Vercel without a token.
+    }
+  }
+
   return true;
 }

@@ -21,7 +21,7 @@ export async function POST(request, { params }) {
     const { model } = params;
     const body = await request.json();
     
-    saveJsonData(model, body);
+    await saveJsonData(model, body);
     
     return NextResponse.json({ success: true, message: 'Data saved successfully' });
   } catch (error) {

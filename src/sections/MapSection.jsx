@@ -6,7 +6,8 @@ const MapSection = ({ compact = false }) => {
   // Using a stable Google Maps embed format that does not require a complex pb string
   const mapEmbedUrl = "https://maps.google.com/maps?q=Western+Business+Park,+Vesu,+Surat,+Gujarat&t=&z=15&ie=UTF8&iwloc=&output=embed";
   const mapLinkUrl = "https://goo.gl/maps/QWvQpGvqSC6pQWvQ9"; // General fallback
-  const actualMapLink = "https://www.google.com/maps/place/Western+Business+Park/@21.1419739,72.7686523,17z/";
+  // Link directly to directions with the exact address as the destination
+  const actualMapLink = "https://www.google.com/maps/dir/?api=1&destination=Shop+No.+518,+5th+Floor,+Western+Business+Park,+Vesu,+Surat,+Gujarat+-+395007";
 
   return (
     <section className={`section map-section ${compact ? 'map-section-compact' : ''}`}>

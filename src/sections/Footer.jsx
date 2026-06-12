@@ -2,6 +2,8 @@ import React from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 import './Footer.css';
 
+import Link from 'next/link';
+
 const Footer = () => {
   return (
     <footer className="footer bg-primary">
@@ -10,8 +12,10 @@ const Footer = () => {
           
           <div className="footer-col">
             <div className="logo" style={{ marginBottom: '1.5rem' }}>
-              <span className="logo-icon text-accent">🦷</span>
-              <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
+              <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span className="logo-icon text-accent">🦷</span>
+                <span className="logo-text heading-3 text-white">Radiance Dentistry</span>
+              </Link>
             </div>
             <p className="text-body" style={{ color: 'rgba(255,255,255,0.7)', marginBottom: '2rem' }}>
               Creating beautiful, confident smiles with advanced technology and compassionate care. Your journey to perfect dental health starts here.
@@ -26,11 +30,11 @@ const Footer = () => {
           <div className="footer-col">
             <h4 className="heading-3 text-white" style={{ fontSize: '1.2rem', marginBottom: '1.5rem' }}>Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#gallery">Smile Gallery</a></li>
-              <li><a href="#reviews">Testimonials</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/about">About Us</Link></li>
+              <li><Link href="/services">Our Services</Link></li>
+              <li><Link href="/gallery">Smile Gallery</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>
 

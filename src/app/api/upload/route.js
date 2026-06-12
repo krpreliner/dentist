@@ -14,27 +14,16 @@ export async function POST(request) {
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Sanitize filename and create unique name
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-    const filename = file.name.replace(/[^a-zA-Z0-9.]/g, '_');
-    const newFilename = `${uniqueSuffix}-${filename}`;
-
-    const uploadDir = path.join(process.cwd(), 'public/uploads');
-    
-    // Ensure directory exists (though we created it, safe to verify)
-    try {
-      await fs.access(uploadDir);
-    } catch {
-      await fs.mkdir(uploadDir, { recursive: true });
-    }
-
-    const filepath = path.join(uploadDir, newFilename);
-    await fs.writeFile(filepath, buffer);
+    // For Vercel Serverless environments, local filesystem is read-only.
+    // We will convert the image directly to a Base64 string and store it inside the JSON data.
+    const base64String = buffer.toString('base64');
+    const mimeType = file.type || 'image/jpeg';
+    const dataUrl = `data:${mimeType};base64,${base64String}`;
 
     return NextResponse.json({ 
       success: true, 
-      url: `/uploads/${newFilename}`,
-      message: 'File uploaded successfully' 
+      url: dataUrl,
+      message: 'File converted to Base64 successfully' 
     });
 
   } catch (error) {

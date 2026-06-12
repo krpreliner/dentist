@@ -103,9 +103,15 @@ async function saveJsonData(model, data) {
         throw new Error('Invalid model');
     }
     // 1. Save locally for instant updates (works immediately on localhost and current Lambda instance)
-    const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(dataDir, `${model}.json`);
+    try {
+        const filePath = __TURBOPACK__imported__module__$5b$externals$5d2f$path__$5b$external$5d$__$28$path$2c$__cjs$29$__["default"].join(dataDir, `${model}.json`);
+        const jsonString = JSON.stringify(data, null, 2);
+        __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, jsonString, 'utf8');
+    } catch (err) {
+    // On Vercel, the file system is read-only. We silently ignore this local write error
+    // because the next step will push it to GitHub permanently!
+    }
     const jsonString = JSON.stringify(data, null, 2);
-    __TURBOPACK__imported__module__$5b$externals$5d2f$fs__$5b$external$5d$__$28$fs$2c$__cjs$29$__["default"].writeFileSync(filePath, jsonString, 'utf8');
     // 2. If GitHub Token is present, push a commit to permanently save the changes on Vercel
     const token = process.env.GITHUB_TOKEN;
     const owner = process.env.GITHUB_OWNER || 'krpreliner';

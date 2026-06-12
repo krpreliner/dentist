@@ -30,9 +30,16 @@ export async function saveJsonData(model, data) {
   }
 
   // 1. Save locally for instant updates (works immediately on localhost and current Lambda instance)
-  const filePath = path.join(dataDir, `${model}.json`);
+  try {
+    const filePath = path.join(dataDir, `${model}.json`);
+    const jsonString = JSON.stringify(data, null, 2);
+    fs.writeFileSync(filePath, jsonString, 'utf8');
+  } catch (err) {
+    // On Vercel, the file system is read-only. We silently ignore this local write error
+    // because the next step will push it to GitHub permanently!
+  }
+  
   const jsonString = JSON.stringify(data, null, 2);
-  fs.writeFileSync(filePath, jsonString, 'utf8');
 
   // 2. If GitHub Token is present, push a commit to permanently save the changes on Vercel
   const token = process.env.GITHUB_TOKEN;

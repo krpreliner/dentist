@@ -1,11 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/admin/contact/page": "app/admin/contact/page.js",
-  "/admin/faqs/page": "app/admin/faqs/page.js",
-  "/admin/gallery/page": "app/admin/gallery/page.js",
-  "/admin/login/page": "app/admin/login/page.js",
-  "/admin/page": "app/admin/page.js",
-  "/api/auth/login/route": "app/api/auth/login/route.js",
-  "/api/data/[model]/route": "app/api/data/[model]/route.js",
-  "/api/upload/route": "app/api/upload/route.js"
+  "/api/data/[model]/route": "app/api/data/[model]/route.js"
 }

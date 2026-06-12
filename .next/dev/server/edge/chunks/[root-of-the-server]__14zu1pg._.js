@@ -23,7 +23,7 @@ __turbopack_context__.s([
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$jose$2f$dist$2f$webapi$2f$jwt$2f$sign$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/node_modules/jose/dist/webapi/jwt/sign.js [middleware-edge] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$jose$2f$dist$2f$webapi$2f$jwt$2f$verify$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/Downloads/DENTIST/node_modules/jose/dist/webapi/jwt/verify.js [middleware-edge] (ecmascript)");
 ;
-const secretKey = process.env.JWT_SECRET || 'fallback_secret_radiance_dentistry_2026';
+const secretKey = process.env.JWT_SECRET || 'super_secret_fallback_key_for_vercel_deployments' || 'fallback_secret_radiance_dentistry_2026';
 const key = new TextEncoder().encode(secretKey);
 async function encrypt(payload) {
     return await new __TURBOPACK__imported__module__$5b$project$5d2f$Downloads$2f$DENTIST$2f$node_modules$2f$jose$2f$dist$2f$webapi$2f$jwt$2f$sign$2e$js__$5b$middleware$2d$edge$5d$__$28$ecmascript$29$__["SignJWT"](payload).setProtectedHeader({

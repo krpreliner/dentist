@@ -6,8 +6,8 @@ export async function POST(request) {
   try {
     const { username, password } = await request.json();
 
-    const expectedUser = process.env.ADMIN_USERNAME;
-    const expectedPass = process.env.ADMIN_PASSWORD;
+    const expectedUser = process.env.ADMIN_USERNAME || 'admin';
+    const expectedPass = process.env.ADMIN_PASSWORD || 'password';
 
     // Basic validation
     if (!username || !password) {

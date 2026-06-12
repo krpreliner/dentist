@@ -1,6 +1,6 @@
 import { SignJWT, jwtVerify } from 'jose';
 
-const secretKey = process.env.JWT_SECRET || 'fallback_secret_radiance_dentistry_2026';
+const secretKey = process.env.JWT_SECRET || 'super_secret_fallback_key_for_vercel_deployments' || 'fallback_secret_radiance_dentistry_2026';
 const key = new TextEncoder().encode(secretKey);
 
 export async function encrypt(payload) {

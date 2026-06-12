@@ -1,0 +1,97 @@
+/* [project]/Downloads/DENTIST/src/components/Navbar.css [app-client] (css) */
+.navbar {
+  z-index: 1000;
+  width: 100%;
+  transition: all var(--transition-normal);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.navbar .container {
+  max-width: 1400px;
+}
+
+.logo {
+  align-items: center;
+  gap: .5rem;
+  display: flex;
+}
+
+.logo-icon {
+  font-size: 2rem;
+}
+
+.logo-text {
+  white-space: nowrap;
+  margin-bottom: 0;
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  display: flex;
+}
+
+.nav-links a {
+  color: var(--color-white);
+  opacity: .8;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+.nav-actions {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.nav-phone {
+  color: var(--color-accent);
+  gap: .5rem;
+  font-weight: 600;
+}
+
+.btn-sm {
+  padding: .75rem 1.5rem;
+  font-size: .9rem;
+}
+
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-actions {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .3rem;
+  }
+
+  .nav-phone {
+    font-size: .85rem;
+  }
+
+  .btn-sm {
+    padding: .4rem 1rem;
+    font-size: .8rem;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/*# sourceMappingURL=Downloads_DENTIST_src_components_Navbar_css_1igg3k2._.single.css.map*/

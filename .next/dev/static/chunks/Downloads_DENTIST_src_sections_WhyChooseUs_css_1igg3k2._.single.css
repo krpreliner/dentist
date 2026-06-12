@@ -1,0 +1,106 @@
+/* [project]/Downloads/DENTIST/src/sections/WhyChooseUs.css [app-client] (css) */
+.why-choose-us {
+  background-color: var(--color-background);
+  position: relative;
+}
+
+.why-choose-us:before {
+  content: "";
+  z-index: 0;
+  background: radial-gradient(circle at 10% 20%, #d4af370d 0%, #0000 40%), radial-gradient(circle at 90% 80%, #0a192f0d 0%, #0000 40%);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.section-header {
+  z-index: 1;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.badge {
+  border-radius: var(--border-radius-full);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  padding: .4rem 1.2rem;
+  font-size: .85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.reasons-grid {
+  z-index: 1;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  display: grid;
+  position: relative;
+}
+
+.reason-card {
+  text-align: center;
+  background: var(--color-white);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  border: 1px solid #0000000d;
+  padding: 2.5rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reason-card:after {
+  content: "";
+  background: var(--color-accent);
+  width: 100%;
+  height: 4px;
+  transition: transform var(--transition-normal);
+  transform-origin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+}
+
+.reason-card:hover {
+  box-shadow: var(--shadow-premium), 0 0 30px #d4af371a;
+  border-color: #d4af374d;
+  transform: translateY(-10px);
+}
+
+.reason-card:hover:after {
+  transform: scaleX(1);
+}
+
+.reason-icon-wrapper {
+  background: var(--color-background);
+  width: 80px;
+  height: 80px;
+  transition: all var(--transition-normal);
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  display: flex;
+  box-shadow: inset 0 0 20px #00000005;
+}
+
+.reason-card:hover .reason-icon-wrapper {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.reason-card:hover .reason-icon {
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.reason-icon {
+  transition: transform var(--transition-normal);
+}
+
+/*# sourceMappingURL=Downloads_DENTIST_src_sections_WhyChooseUs_css_1igg3k2._.single.css.map*/

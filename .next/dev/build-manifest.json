@@ -1,0 +1,26 @@
+{
+  "pages": {
+    "/_app": []
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/1qvq_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_01rn3no._.js",
+    "static/chunks/1qvq_next_dist_compiled_next-devtools_index_0li5xeg.js",
+    "static/chunks/1qvq_next_dist_compiled_react-dom_0-jxp27._.js",
+    "static/chunks/1qvq_next_dist_compiled_react-server-dom-turbopack_11sv25z._.js",
+    "static/chunks/1qvq_next_dist_compiled_0er-km0._.js",
+    "static/chunks/1qvq_next_dist_client_1vyom1r._.js",
+    "static/chunks/1qvq_next_dist_0qy_nge._.js",
+    "static/chunks/1qvq_@swc_helpers_cjs_1ydw1p9._.js",
+    "static/chunks/Downloads_DENTIST_1anvha4._.js",
+    "static/chunks/turbopack-Downloads_DENTIST_1_21yul._.js"
+  ]
+}

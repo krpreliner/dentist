@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/krish/Downloads/DENTIST/src/components/FloatingActions.jsx"],"sourcesContent":["\"use client\";\nimport React from 'react';\nimport { FaWhatsapp, FaPhoneAlt } from 'react-icons/fa';\nimport './FloatingActions.css';\n\nconst FloatingActions = () => {\n  return (\n    <div className=\"floating-actions\">\n      <a href=\"tel:+918696781255\" className=\"floating-btn phone-btn\">\n        <FaPhoneAlt />\n        <span className=\"tooltip\">Call Us</span>\n      </a>\n      <a href=\"https://wa.me/918696781255\" target=\"_blank\" rel=\"noreferrer\" className=\"floating-btn whatsapp-btn\">\n        <FaWhatsapp />\n        <span className=\"tooltip\">WhatsApp</span>\n      </a>\n    </div>\n  );\n};\n\nexport default FloatingActions;\n"],"names":["FloatingActions","className","href","target","rel"],"mappings":";;;;;AACA;AACA;AAFA;;;;;AAKA,MAAMA,kBAAkB;IACtB,qBACE,sQAAC;QAAIC,WAAU;;0BACb,sQAAC;gBAAEC,MAAK;gBAAoBD,WAAU;;kCACpC,sQAAC,oLAAU;;;;;kCACX,sQAAC;wBAAKA,WAAU;kCAAU;;;;;;;;;;;;0BAE5B,sQAAC;gBAAEC,MAAK;gBAA6BC,QAAO;gBAASC,KAAI;gBAAaH,WAAU;;kCAC9E,sQAAC,oLAAU;;;;;kCACX,sQAAC;wBAAKA,WAAU;kCAAU;;;;;;;;;;;;;;;;;;AAIlC;uCAEeD"}}]
+}

@@ -52,17 +52,26 @@ export default function GalleryAdmin() {
   const handleImageUpload = async (index, field, file) => {
     if (!file) return;
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('image', file); // ImgBB requires the field to be named "image"
+
+    const apiKey = process.env.NEXT_PUBLIC_IMGBB_API_KEY;
+    if (!apiKey) {
+      alert('ImgBB API Key is missing. Please add NEXT_PUBLIC_IMGBB_API_KEY to Vercel.');
+      return;
+    }
+
     try {
-      const res = await fetch('/api/upload', {
+      const res = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
         method: 'POST',
         body: formData,
       });
       const data = await res.json();
+      
       if (data.success) {
-        handleChange(index, field, data.url);
+        // ImgBB returns the URL in data.data.url
+        handleChange(index, field, data.data.url);
       } else {
-        alert('Upload failed');
+        alert(`Upload failed: ${data.error?.message || 'Unknown error'}`);
       }
     } catch (err) {
       console.error(err);

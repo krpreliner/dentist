@@ -25,10 +25,15 @@ export default function ServicesAdmin() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(updatedData),
       });
-      if (res.ok) setMessage('Saved successfully!');
-      else setMessage('Failed to save.');
+      const data = await res.json().catch(() => ({}));
+      
+      if (res.ok) {
+        setMessage('Saved successfully!');
+      } else {
+        setMessage(`Failed to save: ${data.error || res.statusText}`);
+      }
     } catch (err) {
-      setMessage('Error saving data.');
+      setMessage(`Error saving data: ${err.message}`);
     }
     setSaving(false);
   };
@@ -47,17 +52,25 @@ export default function ServicesAdmin() {
   const handleImageUpload = async (index, file) => {
     if (!file) return;
     const formData = new FormData();
-    formData.append('file', file);
+    formData.append('image', file); // ImgBB requires the field to be named "image"
+
+    const apiKey = process.env.NEXT_PUBLIC_IMGBB_API_KEY;
+    if (!apiKey) {
+      alert('ImgBB API Key is missing. Please add NEXT_PUBLIC_IMGBB_API_KEY to Vercel.');
+      return;
+    }
+
     try {
-      const res = await fetch('/api/upload', {
+      const res = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
         method: 'POST',
         body: formData,
       });
       const data = await res.json();
+      
       if (data.success) {
-        handleChange(index, 'image', data.url);
+        handleChange(index, 'image', data.data.url);
       } else {
-        alert('Upload failed');
+        alert(`Upload failed: ${data.error?.message || 'Unknown error'}`);
       }
     } catch (err) {
       console.error(err);

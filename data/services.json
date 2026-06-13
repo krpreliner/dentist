@@ -1,12 +1,5 @@
 [
   {
-    "id": "teeth-whitening",
-    "slug": "teeth-whitening",
-    "title": "Teeth Whitening",
-    "desc": "Advanced laser whitening for an instantly brighter smile.",
-    "icon": "FaTeeth"
-  },
-  {
     "id": "smile-makeover",
     "slug": "smile-makeover",
     "title": "Smile Makeover",

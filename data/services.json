@@ -1,5 +1,21 @@
 [
   {
+    "id": "dental-implants",
+    "slug": "dental-implants",
+    "title": "Dental Implants",
+    "desc": "Permanent, natural-looking tooth replacement.",
+    "icon": "FaTooth",
+    "image": ""
+  },
+  {
+    "id": "teeth-whitening",
+    "slug": "teeth-whitening",
+    "title": "Teeth Whitening",
+    "desc": "Advanced laser whitening for an instantly brighter smile.",
+    "icon": "FaTeeth",
+    "image": ""
+  },
+  {
     "id": "smile-makeover",
     "slug": "smile-makeover",
     "title": "Smile Makeover",

@@ -1,5 +1,12 @@
 [
   {
+    "id": "dental-implants",
+    "slug": "dental-implants",
+    "title": "Dental Implants",
+    "desc": "Permanent, natural-looking tooth replacement.",
+    "icon": "FaTooth"
+  },
+  {
     "id": "teeth-whitening",
     "slug": "teeth-whitening",
     "title": "Teeth Whitening",

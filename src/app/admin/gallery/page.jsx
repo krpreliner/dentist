@@ -110,6 +110,7 @@ export default function GalleryAdmin() {
                       <button onClick={() => handleChange(index, 'beforeImage', '')} style={{ position: 'absolute', top: '4px', right: '4px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
                     </div>
                   )}
+                  <input type="text" placeholder="Or Paste Before Image URL..." value={item.beforeImage || ''} onChange={(e) => handleChange(index, 'beforeImage', e.target.value)} className="admin-input" />
                   <input type="file" onChange={(e) => handleImageUpload(index, 'beforeImage', e.target.files[0])} />
                 </div>
               </div>
@@ -122,6 +123,7 @@ export default function GalleryAdmin() {
                       <button onClick={() => handleChange(index, 'afterImage', '')} style={{ position: 'absolute', top: '4px', right: '4px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
                     </div>
                   )}
+                  <input type="text" placeholder="Or Paste After Image URL..." value={item.afterImage || ''} onChange={(e) => handleChange(index, 'afterImage', e.target.value)} className="admin-input" />
                   <input type="file" onChange={(e) => handleImageUpload(index, 'afterImage', e.target.files[0])} />
                 </div>
               </div>

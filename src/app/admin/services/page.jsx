@@ -112,7 +112,13 @@ export default function ServicesAdmin() {
                     <button onClick={() => handleChange(index, 'image', '')} style={{ position: 'absolute', top: '-8px', right: '-8px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
                   </div>
                 )}
-                <input type="file" onChange={(e) => handleImageUpload(index, e.target.files[0])} />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%' }}>
+                  <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
+                    <input type="text" placeholder="Or Paste Image URL directly..." value={item.image || ''} onChange={(e) => handleChange(index, 'image', e.target.value)} className="admin-input" style={{ flex: 1 }} />
+                    <span style={{ fontSize: '0.8rem', color: '#666' }}>OR</span>
+                    <input type="file" onChange={(e) => handleImageUpload(index, e.target.files[0])} style={{ flex: 1 }} />
+                  </div>
+                </div>
               </div>
             </div>
             <button onClick={() => handleDelete(index)} style={{ background: 'red', color: 'white', border: 'none', padding: '0.5rem', cursor: 'pointer' }}>Delete</button>

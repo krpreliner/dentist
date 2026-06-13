@@ -1,13 +1,5 @@
 [
   {
-    "id": "root-canal-treatment",
-    "slug": "root-canal-treatment",
-    "title": "Root Canal Treatment",
-    "desc": "Painless microscopic root canal therapy in a single visit.",
-    "icon": "FaSyringe",
-    "image": "https://i.ibb.co/fz63gnFm/josaa-image.jpg"
-  },
-  {
     "id": "dental-implants",
     "slug": "dental-implants",
     "title": "Dental Implants",

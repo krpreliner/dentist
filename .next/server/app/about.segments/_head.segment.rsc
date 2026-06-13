@@ -1,5 +1,0 @@
-1:"$Sreact.fragment"
-2:I[14612,["/_next/static/chunks/0rmhwpvggwpk4.js","/_next/static/chunks/0w2taf_wsi2ge.js","/_next/static/chunks/04dc4bvqw2klb.js"],"ViewportBoundary"]
-3:I[14612,["/_next/static/chunks/0rmhwpvggwpk4.js","/_next/static/chunks/0w2taf_wsi2ge.js","/_next/static/chunks/04dc4bvqw2klb.js"],"MetadataBoundary"]
-4:"$Sreact.suspense"
-0:{"rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"About Dr. Ruchi Jain | Radiance Dentistry"}],["$","meta","1",{"name":"description","content":"Meet Dr. Ruchi Jain, a leading microscopic endodontist in Surat, dedicated to painless, world-class dental care."}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"lztNi4GiAJYxAgIP2AV8a"}

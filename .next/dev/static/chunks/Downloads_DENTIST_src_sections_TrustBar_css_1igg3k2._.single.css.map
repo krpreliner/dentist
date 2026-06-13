@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/Downloads/DENTIST/src/sections/TrustBar.css"],"sourcesContent":[".trust-bar {\n  background-color: var(--color-primary);\n  padding: 4rem 0;\n  position: relative;\n  z-index: 10;\n  box-shadow: 0 -10px 30px rgba(0,0,0,0.1);\n}\n\n.trust-stats-grid {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  flex-wrap: wrap;\n  gap: 2rem;\n}\n\n.trust-stat-item {\n  text-align: center;\n  flex: 1;\n  min-width: 150px;\n  opacity: 0; /* Handled by animation */\n}\n\n.trust-stat-value {\n  font-family: var(--font-heading);\n  font-size: 3rem;\n  font-weight: 700;\n  line-height: 1;\n  margin-bottom: 0.5rem;\n  text-shadow: 0 2px 10px rgba(212, 175, 55, 0.3);\n}\n\n.trust-stat-label {\n  font-size: 1rem;\n  font-weight: 500;\n  text-transform: uppercase;\n  letter-spacing: 1px;\n  opacity: 0.9;\n}\n\n@media (max-width: 768px) {\n  .trust-stats-grid {\n    gap: 3rem 1rem;\n  }\n  \n  .trust-stat-item {\n    min-width: calc(50% - 1rem);\n  }\n  \n  .trust-stat-value {\n    font-size: 2.5rem;\n  }\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;AAQA;;;;;;;;AAQA;;;;;;;AAOA;;;;;;;;;AASA;;;;;;;;AAQA;EACE;;;;EAIA;;;;EAIA"}}]
-}

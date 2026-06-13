@@ -4,7 +4,8 @@
     "slug": "dental-implants",
     "title": "Dental Implants",
     "desc": "Permanent, natural-looking tooth replacement.",
-    "icon": "FaTooth"
+    "icon": "FaTooth",
+    "image": "https://i.ibb.co/m5BF0Csz/web-dev-alone.jpg"
   },
   {
     "id": "teeth-whitening",

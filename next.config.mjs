@@ -4,9 +4,6 @@ const nextConfig = {
   images: {
     unoptimized: true, // While developing locally without a proper image server
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 };
 
 export default nextConfig;

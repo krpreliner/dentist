@@ -22,10 +22,22 @@ export default async function ServicePage({ params }) {
   const faqs = getJsonData('faqs') || [];
   const testimonials = getJsonData('testimonials') || [];
 
-  // If service doesn't exist, we could return a 404, but for now we fallback to generic
-  const service = serviceDetails[slug] || {
+  const services = getJsonData('services') || [];
+  
+  // Try to find the service by matching the URL slug to the title
+  const foundService = services.find(s => 
+    s.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug
+  );
+
+  const service = foundService ? {
+    title: foundService.title,
+    desc: foundService.description || '',
+    image: foundService.image || '',
+    benefits: ['Expert Care', 'Modern Technology', 'Comfortable Environment'] // Default benefits since CMS doesn't track them yet
+  } : {
     title: 'Dental Treatment',
     desc: 'Advanced dental care tailored to your needs.',
+    image: '',
     benefits: ['Expert Care', 'Modern Technology', 'Comfortable Environment']
   };
 
@@ -41,6 +53,11 @@ export default async function ServicePage({ params }) {
 
       <section className="section" style={{ backgroundColor: 'white' }}>
         <div className="container" style={{ maxWidth: '900px' }}>
+          {service.image && (
+            <div style={{ marginBottom: '3rem', textAlign: 'center' }}>
+              <img src={service.image} alt={service.title} style={{ width: '100%', maxHeight: '400px', objectFit: 'cover', borderRadius: '12px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }} />
+            </div>
+          )}
           <h2 className="heading-2 text-primary" style={{ marginBottom: '2rem' }}>Why Choose This Treatment?</h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1rem', marginBottom: '3rem' }}>
             {service.benefits.map((benefit, idx) => (

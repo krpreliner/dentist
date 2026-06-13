@@ -46,8 +46,11 @@ export async function saveJsonData(model, data) {
   const owner = process.env.GITHUB_OWNER || 'krpreliner';
   const repo = process.env.GITHUB_REPO || 'dentist';
 
-  if (token) {
-    try {
+  if (!token) {
+    throw new Error('GITHUB_TOKEN is missing! If you are testing locally, add it to your .env.local file. If on Vercel, make sure you Redeployed!');
+  }
+
+  try {
       const gitPath = `data/${model}.json`;
       const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${gitPath}`;
       
@@ -91,7 +94,6 @@ export async function saveJsonData(model, data) {
       // Throw the error so the frontend UI can display exactly why GitHub rejected it
       throw new Error(`Git CMS Push Failed: ${err.message}`);
     }
-  }
 
   return true;
 }

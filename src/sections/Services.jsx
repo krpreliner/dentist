@@ -31,14 +31,21 @@ const Services = () => {
         </div>
 
         <div className="services-grid">
-          {servicesList.map((service, index) => (
-            <div key={service.id || index} className={`service-card ${index % 2 === 0 ? 'service-card-white' : 'service-card-teal'}`}>
-              <div className="service-icon text-accent">{iconMap[service.icon] || <FaTeeth />}</div>
-              <h3 className="heading-3 text-primary" style={{ fontSize: '1.2rem' }}>{service.title}</h3>
-              <p className="text-body text-text-light" style={{ fontSize: '0.9rem', marginBottom: '1.5rem' }}>{service.desc}</p>
-              <Link href={`/services/${service.slug}`} className="service-link text-accent">Learn More &rarr;</Link>
-            </div>
-          ))}
+          {servicesList.map((service, index) => {
+            const slug = service.slug || service.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'treatment';
+            return (
+              <div key={service.id || index} className={`service-card ${index % 2 === 0 ? 'service-card-white' : 'service-card-teal'}`} style={{ display: 'flex', flexDirection: 'column' }}>
+                {service.image ? (
+                  <img src={service.image} alt={service.title} style={{ width: '100%', height: '200px', objectFit: 'cover', borderRadius: '8px', marginBottom: '1rem' }} />
+                ) : (
+                  <div className="service-icon text-accent">{iconMap[service.icon] || <FaTeeth />}</div>
+                )}
+                <h3 className="heading-3 text-primary" style={{ fontSize: '1.2rem', marginTop: service.image ? '0.5rem' : '0' }}>{service.title}</h3>
+                <p className="text-body text-text-light" style={{ fontSize: '0.9rem', marginBottom: '1.5rem', flexGrow: 1 }}>{service.description || service.desc}</p>
+                <Link href={`/services/${slug}`} className="service-link text-accent" style={{ marginTop: 'auto' }}>Learn More &rarr;</Link>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

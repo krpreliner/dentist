@@ -5,7 +5,7 @@ const nextConfig = {
     unoptimized: true, // While developing locally without a proper image server
   },
   outputFileTracingIncludes: {
-    '/*': ['./data/**/*'],
+    '/**/*': ['./data/**/*'],
   },
 };
 

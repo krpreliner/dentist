@@ -24,14 +24,15 @@ export default async function ServicePage({ params }) {
 
   const services = getJsonData('services') || [];
   
-  // Try to find the service by matching the URL slug to the title
+  // Try to find the service by matching the explicit slug or falling back to title
   const foundService = services.find(s => 
-    s.title?.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug
+    (s.slug && s.slug === slug) || 
+    (s.title && s.title.toLowerCase().replace(/[^a-z0-9]+/g, '-') === slug)
   );
 
   const service = foundService ? {
     title: foundService.title,
-    desc: foundService.description || '',
+    desc: foundService.desc || foundService.description || '', // Check both desc and description
     image: foundService.image || '',
     benefits: ['Expert Care', 'Modern Technology', 'Comfortable Environment'] // Default benefits since CMS doesn't track them yet
   } : {

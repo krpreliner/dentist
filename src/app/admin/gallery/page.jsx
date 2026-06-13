@@ -104,14 +104,24 @@ export default function GalleryAdmin() {
               <div style={{ flex: 1 }}>
                 <label>Before Image</label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  {item.beforeImage && <img src={item.beforeImage} alt="Before" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain', background: '#f5f5f5' }} />}
+                  {item.beforeImage && (
+                    <div style={{ position: 'relative' }}>
+                      <img src={item.beforeImage} alt="Before" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain', background: '#f5f5f5', borderRadius: '4px' }} />
+                      <button onClick={() => handleChange(index, 'beforeImage', '')} style={{ position: 'absolute', top: '4px', right: '4px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
+                    </div>
+                  )}
                   <input type="file" onChange={(e) => handleImageUpload(index, 'beforeImage', e.target.files[0])} />
                 </div>
               </div>
               <div style={{ flex: 1 }}>
                 <label>After Image</label>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  {item.afterImage && <img src={item.afterImage} alt="After" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain', background: '#f5f5f5' }} />}
+                  {item.afterImage && (
+                    <div style={{ position: 'relative' }}>
+                      <img src={item.afterImage} alt="After" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain', background: '#f5f5f5', borderRadius: '4px' }} />
+                      <button onClick={() => handleChange(index, 'afterImage', '')} style={{ position: 'absolute', top: '4px', right: '4px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
+                    </div>
+                  )}
                   <input type="file" onChange={(e) => handleImageUpload(index, 'afterImage', e.target.files[0])} />
                 </div>
               </div>

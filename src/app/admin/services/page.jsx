@@ -106,7 +106,12 @@ export default function ServicesAdmin() {
             <div style={{ marginBottom: '0.5rem' }}>
               <label>Service Image</label>
               <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                {item.image && <img src={item.image} alt={item.title} style={{ width: '100px', height: '100px', objectFit: 'cover' }} />}
+                {item.image && (
+                  <div style={{ position: 'relative' }}>
+                    <img src={item.image} alt={item.title} style={{ width: '100px', height: '100px', objectFit: 'cover', borderRadius: '4px' }} />
+                    <button onClick={() => handleChange(index, 'image', '')} style={{ position: 'absolute', top: '-8px', right: '-8px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
+                  </div>
+                )}
                 <input type="file" onChange={(e) => handleImageUpload(index, e.target.files[0])} />
               </div>
             </div>

@@ -3,7 +3,7 @@ import React from 'react';
 import { FaTeeth, FaSmile, FaMagic, FaSyringe, FaTooth, FaChild, FaAlignLeft, FaCheckDouble, FaStethoscope } from 'react-icons/fa';
 import './Services.css';
 import Link from 'next/link';
-import servicesList from '../../data/services.json';
+import { fetchJsonDataFromGit } from '../lib/fetchData';
 
 const iconMap = {
   FaTeeth: <FaTeeth />,
@@ -17,7 +17,8 @@ const iconMap = {
   FaStethoscope: <FaStethoscope />
 };
 
-const Services = () => {
+const Services = async () => {
+  const servicesList = await fetchJsonDataFromGit('services') || [];
 
   return (
     <section className="section services" id="services">

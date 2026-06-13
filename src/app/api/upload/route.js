@@ -20,6 +20,8 @@ export async function POST(request) {
     const mimeType = file.type || 'image/jpeg';
     const dataUrl = `data:${mimeType};base64,${base64String}`;
 
+    console.log(`[Upload API] Successfully converted ${file.name} to Base64 data URL.`);
+
     return NextResponse.json({ 
       success: true, 
       url: dataUrl,

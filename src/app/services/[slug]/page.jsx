@@ -4,9 +4,7 @@ import Testimonials from '../../../sections/Testimonials';
 import BookingSection from '../../../sections/BookingSection';
 import { FaCheckCircle } from 'react-icons/fa';
 
-import faqsData from '../../../../data/faqs.json';
-import testimonialsData from '../../../../data/testimonials.json';
-import servicesData from '../../../../data/services.json';
+import { fetchJsonDataFromGit } from '../../../../lib/fetchData';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -26,6 +24,11 @@ export async function generateMetadata({ params }) {
 export default async function ServicePage({ params }) {
   const { slug } = await params;
   
+  // Dynamically fetch from GitHub directly to bypass Vercel builds!
+  const faqsData = await fetchJsonDataFromGit('faqs');
+  const testimonialsData = await fetchJsonDataFromGit('testimonials');
+  const servicesData = await fetchJsonDataFromGit('services');
+
   const faqs = faqsData || [];
   const testimonials = testimonialsData || [];
   const services = servicesData || [];

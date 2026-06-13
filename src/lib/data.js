@@ -86,11 +86,13 @@ export async function saveJsonData(model, data) {
 
       if (!putRes.ok) {
         const errorText = await putRes.text();
-        console.error('GitHub API Error:', errorText);
+        console.error(`[GitHub API Error] Failed to commit to ${gitPath}:`, errorText);
         throw new Error(`GitHub API Error: ${putRes.status} - ${errorText}`);
       }
+      
+      console.log(`[GitHub Commit Success] Successfully pushed changes to ${gitPath}!`);
     } catch (err) {
-      console.error('Git CMS push failed:', err);
+      console.error(`[Git CMS Error] Complete failure while pushing ${model}:`, err);
       // Throw the error so the frontend UI can display exactly why GitHub rejected it
       throw new Error(`Git CMS Push Failed: ${err.message}`);
     }

@@ -1,14 +1,18 @@
 import MapSection from '../../sections/MapSection';
 import BookingSection from '../../sections/BookingSection';
 import FAQ from '../../sections/FAQ';
-import faqsData from '../../../data/faqs.json';
+import { fetchJsonDataFromGit } from '../../lib/fetchData';
 
 export const metadata = {
   title: 'Contact Us | Radiance Dentistry',
   description: 'Get in touch with Radiance Dentistry to book an appointment or ask any questions.',
 };
 
-export default function ContactPage() {
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export default async function ContactPage() {
+  const faqsData = await fetchJsonDataFromGit('faqs');
   const faqs = faqsData || [];
   
   return (

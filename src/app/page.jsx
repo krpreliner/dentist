@@ -6,9 +6,13 @@ import Testimonials from '../sections/Testimonials';
 import MapSection from '../sections/MapSection';
 import BookingSection from '../sections/BookingSection';
 import FAQ from '../sections/FAQ';
-import testimonialsData from '../../data/testimonials.json';
+import { fetchJsonDataFromGit } from '../lib/fetchData';
 
-export default function Home() {
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export default async function Home() {
+  const testimonialsData = await fetchJsonDataFromGit('testimonials');
   const testimonials = testimonialsData || [];
 
   return (

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import FAQ from '../../../sections/FAQ';
 import Testimonials from '../../../sections/Testimonials';
 import BookingSection from '../../../sections/BookingSection';

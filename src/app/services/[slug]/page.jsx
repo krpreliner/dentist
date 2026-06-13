@@ -4,18 +4,9 @@ import Testimonials from '../../../sections/Testimonials';
 import BookingSection from '../../../sections/BookingSection';
 import { FaCheckCircle } from 'react-icons/fa';
 
-import fs from 'fs';
-import path from 'path';
-
-function getStaticJson(filename) {
-  try {
-    const filePath = path.join(process.cwd(), 'data', filename);
-    const content = fs.readFileSync(filePath, 'utf8');
-    return JSON.parse(content);
-  } catch (err) {
-    return null;
-  }
-}
+import faqsData from '../../../../data/faqs.json';
+import testimonialsData from '../../../../data/testimonials.json';
+import servicesData from '../../../../data/services.json';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -35,9 +26,9 @@ export async function generateMetadata({ params }) {
 export default async function ServicePage({ params }) {
   const { slug } = await params;
   
-  const faqs = getStaticJson('faqs.json') || [];
-  const testimonials = getStaticJson('testimonials.json') || [];
-  const services = getStaticJson('services.json') || [];
+  const faqs = faqsData || [];
+  const testimonials = testimonialsData || [];
+  const services = servicesData || [];
   
   // Try to find the service by matching the explicit slug or falling back to title
   const foundService = services.find(s => 

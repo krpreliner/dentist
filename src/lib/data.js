@@ -82,13 +82,14 @@ export async function saveJsonData(model, data) {
       });
 
       if (!putRes.ok) {
-        console.error('GitHub API Error:', await putRes.text());
-        throw new Error('Failed to push to GitHub');
+        const errorText = await putRes.text();
+        console.error('GitHub API Error:', errorText);
+        throw new Error(`GitHub API Error: ${putRes.status} - ${errorText}`);
       }
     } catch (err) {
       console.error('Git CMS push failed:', err);
-      // We don't throw the error so the local write still succeeds, 
-      // but the permanent save will fail silently on Vercel without a token.
+      // Throw the error so the frontend UI can display exactly why GitHub rejected it
+      throw new Error(`Git CMS Push Failed: ${err.message}`);
     }
   }
 

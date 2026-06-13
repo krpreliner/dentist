@@ -1,7 +1,7 @@
 import MeetDentist from '../../sections/MeetDentist';
 import BeforeAfterGallery from '../../sections/BeforeAfterGallery';
 import BookingSection from '../../sections/BookingSection';
-import galleryData from '../../data/gallery.json';
+import galleryData from '../../../data/gallery.json';
 
 export const metadata = {
   title: 'About Dr. Ruchi Jain | Radiance Dentistry',

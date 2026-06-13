@@ -1,4 +1,5 @@
-import React from 'react';
+"use client";
+import React, { useState, useEffect } from 'react';
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import './Navbar.css';
 

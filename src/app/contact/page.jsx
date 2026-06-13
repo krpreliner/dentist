@@ -1,7 +1,7 @@
 import MapSection from '../../sections/MapSection';
 import BookingSection from '../../sections/BookingSection';
 import FAQ from '../../sections/FAQ';
-import faqsData from '../../data/faqs.json';
+import faqsData from '../../../data/faqs.json';
 
 export const metadata = {
   title: 'Contact Us | Radiance Dentistry',

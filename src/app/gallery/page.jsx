@@ -1,6 +1,6 @@
 import BeforeAfterGallery from '../../sections/BeforeAfterGallery';
 import BookingSection from '../../sections/BookingSection';
-import galleryData from '../../data/gallery.json';
+import galleryData from '../../../data/gallery.json';
 
 export const metadata = {
   title: 'Smile Gallery | Radiance Dentistry',

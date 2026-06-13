@@ -19,6 +19,7 @@ function getStaticJson(filename) {
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+// Cache buster 1
 
 export async function generateMetadata({ params }) {
   // Extract slug from params (params is a Promise in Next 15+ but synchronous in 14. We await to be safe)

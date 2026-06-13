@@ -3,7 +3,7 @@ import React from 'react';
 import { FaTeeth, FaSmile, FaMagic, FaSyringe, FaTooth, FaChild, FaAlignLeft, FaCheckDouble, FaStethoscope } from 'react-icons/fa';
 import './Services.css';
 import Link from 'next/link';
-import { getJsonData } from '../lib/data';
+import servicesData from '../../data/services.json';
 
 const iconMap = {
   FaTeeth: <FaTeeth />,
@@ -18,7 +18,7 @@ const iconMap = {
 };
 
 const Services = () => {
-  const servicesList = getJsonData('services') || [];
+  const servicesList = servicesData || [];
 
   return (
     <section className="section services" id="services">

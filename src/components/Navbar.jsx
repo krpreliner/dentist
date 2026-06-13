@@ -3,11 +3,12 @@ import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import './Navbar.css';
 
 import Link from 'next/link';
-
-import { getJsonData } from '../lib/data';
+import { usePathname } from 'next/navigation';
+import contactData from '../../data/contact.json';
 
 const Navbar = () => {
-  const contact = getJsonData('contact');
+  const pathname = usePathname();
+  const contact = contactData;
 
   return (
     <nav className="navbar glass-dark">

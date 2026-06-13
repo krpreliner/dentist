@@ -1,22 +1,21 @@
 import BeforeAfterGallery from '../../sections/BeforeAfterGallery';
 import BookingSection from '../../sections/BookingSection';
+import galleryData from '../../data/gallery.json';
 
 export const metadata = {
-  title: 'Smile Transformations | Radiance Dentistry Surat',
-  description: 'See the dramatic improvements achieved by our advanced cosmetic and restorative treatments in our Smile Gallery in Surat.',
+  title: 'Smile Gallery | Radiance Dentistry',
+  description: 'View our incredible before & after smile transformations at Radiance Dentistry.',
 };
 
-import { getJsonData } from '../../lib/data';
-
 export default function GalleryPage() {
-  const galleryData = getJsonData('gallery') || [];
+  const gallery = galleryData || [];
 
   return (
     <main>
       <div className="section-header text-center" style={{ paddingTop: '10rem', paddingBottom: '2rem', backgroundColor: 'var(--color-primary-light)' }}>
         <h1 className="heading-1 text-white">Smile Gallery</h1>
       </div>
-      <BeforeAfterGallery items={galleryData} />
+      <BeforeAfterGallery items={gallery} />
       <BookingSection />
     </main>
   );

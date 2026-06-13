@@ -1,15 +1,15 @@
 import MapSection from '../../sections/MapSection';
 import BookingSection from '../../sections/BookingSection';
 import FAQ from '../../sections/FAQ';
-import { getJsonData } from '../../lib/data';
+import faqsData from '../../data/faqs.json';
 
 export const metadata = {
-  title: 'Contact Radiance Dentistry | Book an Appointment in Surat',
-  description: 'Contact Dr. Ruchi Jain at Radiance Dentistry, Vesu, Surat. Book an appointment for root canals, implants, and smile makeovers.',
+  title: 'Contact Us | Radiance Dentistry',
+  description: 'Get in touch with Radiance Dentistry to book an appointment or ask any questions.',
 };
 
 export default function ContactPage() {
-  const faqs = getJsonData('faqs') || [];
+  const faqs = faqsData || [];
   
   return (
     <main>

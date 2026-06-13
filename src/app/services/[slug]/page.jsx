@@ -3,7 +3,10 @@ import FAQ from '../../../sections/FAQ';
 import Testimonials from '../../../sections/Testimonials';
 import BookingSection from '../../../sections/BookingSection';
 import { FaCheckCircle } from 'react-icons/fa';
-import { getJsonData } from '../../../lib/data';
+
+import faqsData from '../../../../data/faqs.json';
+import testimonialsData from '../../../../data/testimonials.json';
+import servicesData from '../../../../data/services.json';
 
 export async function generateMetadata({ params }) {
   // Extract slug from params (params is a Promise in Next 15+ but synchronous in 14. We await to be safe)
@@ -19,10 +22,9 @@ export async function generateMetadata({ params }) {
 export default async function ServicePage({ params }) {
   const { slug } = await params;
   
-  const faqs = getJsonData('faqs') || [];
-  const testimonials = getJsonData('testimonials') || [];
-
-  const services = getJsonData('services') || [];
+  const faqs = faqsData || [];
+  const testimonials = testimonialsData || [];
+  const services = servicesData || [];
   
   // Try to find the service by matching the explicit slug or falling back to title
   const foundService = services.find(s => 

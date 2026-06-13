@@ -1,16 +1,15 @@
 import MeetDentist from '../../sections/MeetDentist';
 import BeforeAfterGallery from '../../sections/BeforeAfterGallery';
 import BookingSection from '../../sections/BookingSection';
+import galleryData from '../../data/gallery.json';
 
 export const metadata = {
-  title: 'About Dr. Ruchi Jain | Radiance Dentistry Surat',
-  description: 'Learn about our premium clinic in Vesu, Surat, our story, and meet Dr. Ruchi Jain, our lead cosmetic and implant specialist.',
+  title: 'About Dr. Ruchi Jain | Radiance Dentistry',
+  description: 'Meet Dr. Ruchi Jain, a leading microscopic endodontist in Surat, dedicated to painless, world-class dental care.',
 };
 
-import { getJsonData } from '../../lib/data';
-
 export default function AboutPage() {
-  const galleryData = getJsonData('gallery') || [];
+  const gallery = galleryData || [];
 
   return (
     <main>
@@ -18,7 +17,7 @@ export default function AboutPage() {
         <h1 className="heading-1 text-white">Our Story</h1>
       </div>
       <MeetDentist />
-      <BeforeAfterGallery items={galleryData} />
+      <BeforeAfterGallery items={gallery} />
       <BookingSection />
     </main>
   );

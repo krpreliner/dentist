@@ -5,10 +5,11 @@ import Services from '../sections/Services';
 import Testimonials from '../sections/Testimonials';
 import MapSection from '../sections/MapSection';
 import BookingSection from '../sections/BookingSection';
-import { getJsonData } from '../lib/data';
+import FAQ from '../sections/FAQ';
+import testimonialsData from '../../data/testimonials.json';
 
 export default function Home() {
-  const testimonialsData = getJsonData('testimonials') || [];
+  const testimonials = testimonialsData || [];
 
   return (
     <main>
@@ -16,7 +17,7 @@ export default function Home() {
       <TrustBar />
       <WhyChooseUs />
       <Services />
-      <Testimonials initialReviews={testimonialsData} />
+      <Testimonials initialReviews={testimonials} />
       <MapSection compact={true} />
       <BookingSection />
     </main>

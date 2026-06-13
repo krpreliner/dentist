@@ -3,10 +3,10 @@ import { FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAlt, FaEnve
 import './Footer.css';
 
 import Link from 'next/link';
-import { getJsonData } from '../lib/data';
+import contactData from '../../data/contact.json';
 
 const Footer = () => {
-  const contact = getJsonData('contact');
+  const contact = contactData;
 
   return (
     <footer className="footer bg-primary">

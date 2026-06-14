@@ -1,34 +1,147 @@
-.gallery {
-  background-color: var(--color-background);
+/* Modern Gallery Section */
+.gallery-section {
   position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%);
+  overflow: hidden;
+}
+
+/* Decorative Blurs */
+.gallery-bg-blur {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  z-index: 1;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.blur-1 {
+  top: -10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(14, 165, 233, 0.2); /* Cyan */
+}
+
+.blur-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: rgba(56, 189, 248, 0.15); /* Light Blue */
+}
+
+/* Header Styling */
+.gallery-header {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.gallery-pill {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(14, 165, 233, 0.05));
+  color: #0284C7;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(14, 165, 233, 0.2);
+}
+
+.gallery-heading {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #0EA5E9, #14B8A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gallery-subtext {
+  color: #64748B;
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Items Container */
+.gallery-items-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
 }
 
 .comparison-wrapper {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 1rem;
+  width: 100%;
+  max-width: 900px; /* Desktop max width */
+  animation: floatUp 0.8s ease-out forwards;
 }
 
-.comparison-container {
+@keyframes floatUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.comparison-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1E293B;
+  margin-bottom: 1.5rem;
+}
+
+/* Premium Card Design */
+.comparison-card {
   position: relative;
   width: 100%;
-  padding-bottom: 60%; /* Aspect ratio */
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  background: #FFFFFF;
+  border-radius: 24px;
   overflow: hidden;
-  border-radius: var(--border-radius-xl);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.05);
   cursor: ew-resize;
   touch-action: pan-y;
   user-select: none;
+  border: 4px solid white; /* Adds a nice premium frame */
 }
 
+/* Fix mobile width to 95% */
+@media (max-width: 768px) {
+  .comparison-wrapper {
+    width: 95%;
+  }
+  .comparison-card {
+    border-radius: 16px;
+    border-width: 2px;
+  }
+}
+
+/* Image Presentation */
 .comparison-image {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .comparison-image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Maintains aspect ratio completely filling the area */
   display: block;
 }
 
@@ -40,65 +153,95 @@
   z-index: 1;
 }
 
-.image-label {
+/* Premium Labels */
+.image-badge {
   position: absolute;
-  top: 20px;
-  padding: 0.5rem 1.5rem;
-  font-weight: 600;
-  border-radius: var(--border-radius-full);
+  top: 1.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 0.85rem;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  pointer-events: none; /* Let clicks pass through */
+  z-index: 5;
 }
 
-.label-before {
-  left: 20px;
+.badge-before {
+  left: 1.5rem;
+  background: rgba(15, 23, 42, 0.7);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.label-after {
-  right: 20px;
+.badge-after {
+  right: 1.5rem;
+  background: rgba(14, 165, 233, 0.9);
+  color: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.slider-handle {
+@media (max-width: 768px) {
+  .image-badge {
+    top: 1rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.7rem;
+  }
+  .badge-before { left: 1rem; }
+  .badge-after { right: 1rem; }
+}
+
+/* Modern Slider Handle */
+.slider-line {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 4px;
-  background-color: var(--color-white);
-  z-index: 3;
+  width: 2px; /* Very thin line */
+  background: #FFFFFF;
+  z-index: 10;
   transform: translateX(-50%);
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  pointer-events: none; /* Clicks happen on the container */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-.slider-button {
+.slider-knob {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #0EA5E9, #14B8A6);
   border-radius: 50%;
-  background-color: var(--color-white);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  border: 3px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4), 0 0 0 4px rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.slider-arrow {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
+.comparison-card:hover .slider-knob {
+  transform: translate(-50%, -50%) scale(1.1);
+  box-shadow: 0 8px 16px rgba(14, 165, 233, 0.5), 0 0 0 4px rgba(255, 255, 255, 0.3);
 }
 
-.slider-arrow.left {
-  border-right: 6px solid var(--color-primary);
-  margin-right: 2px;
+.slider-knob svg {
+  width: 20px;
+  height: 20px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
 }
 
-.slider-arrow.right {
-  border-left: 6px solid var(--color-primary);
-  margin-left: 2px;
+@media (max-width: 768px) {
+  .slider-knob {
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+  }
+  .slider-knob svg {
+    width: 16px;
+    height: 16px;
+  }
 }

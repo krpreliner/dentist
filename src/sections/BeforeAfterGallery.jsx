@@ -69,8 +69,11 @@ const GalleryItem = ({ item }) => {
 };
 
 const BeforeAfterGallery = ({ items = [] }) => {
-  const displayItems = items && items.length > 0 
-    ? items 
+  // Filter out any items that don't have both images
+  const validItems = items.filter(item => item.beforeImage && item.afterImage);
+  
+  const displayItems = validItems.length > 0 
+    ? validItems 
     : [{ title: 'Cosmetic Makeover', beforeImage: beforeImg.src || beforeImg, afterImage: afterImg.src || afterImg }];
 
   return (

@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server';
 import { getJsonData, saveJsonData } from '../../../../lib/data';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET(request, { params }) {
   try {
     const resolvedParams = await params;

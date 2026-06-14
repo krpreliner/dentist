@@ -11,24 +11,13 @@ export default function ServicesAdmin() {
   const [deleteIndex, setDeleteIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/api/data/services')
+    fetch(`/api/data/services?t=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
         if (Array.isArray(json)) setServices(json);
       })
       .catch(err => console.error(err));
   }, []);
-
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      if (isDirty) {
-        e.preventDefault();
-        e.returnValue = '';
-      }
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [isDirty]);
 
   const saveServices = async (updatedData) => {
     setSaving(true);
@@ -80,7 +69,10 @@ export default function ServicesAdmin() {
       const data = await res.json();
       
       if (data.success) {
-        handleChange(index, 'image', data.url);
+        const newData = [...services];
+        newData[index] = { ...newData[index], image: data.url };
+        setServices(newData);
+        saveServices(newData);
       } else {
         alert(`Upload failed: ${data.error || 'Unknown error'}`);
       }
@@ -94,7 +86,7 @@ export default function ServicesAdmin() {
     if (deleteIndex === null) return;
     const newData = services.filter((_, i) => i !== deleteIndex);
     setServices(newData);
-    setIsDirty(true);
+    saveServices(newData);
     setDeleteIndex(null);
   };
 

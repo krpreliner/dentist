@@ -10,24 +10,13 @@ export default function FaqsAdmin() {
   const [deleteIndex, setDeleteIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/api/data/faqs')
+    fetch(`/api/data/faqs?t=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
         if (Array.isArray(json)) setFaqs(json);
       })
       .catch(err => console.error(err));
   }, []);
-
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      if (isDirty) {
-        e.preventDefault();
-        e.returnValue = '';
-      }
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [isDirty]);
 
   const saveFaqs = async (updatedFaqs) => {
     setSaving(true);
@@ -68,7 +57,7 @@ export default function FaqsAdmin() {
     if (deleteIndex === null) return;
     const newFaqs = faqs.filter((_, i) => i !== deleteIndex);
     setFaqs(newFaqs);
-    setIsDirty(true);
+    saveFaqs(newFaqs);
     setDeleteIndex(null);
   };
 

@@ -10,24 +10,13 @@ export default function TestimonialsAdmin() {
   const [deleteIndex, setDeleteIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/api/data/testimonials')
+    fetch(`/api/data/testimonials?t=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
         if (Array.isArray(json)) setTestimonials(json);
       })
       .catch(err => console.error(err));
   }, []);
-
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      if (isDirty) {
-        e.preventDefault();
-        e.returnValue = '';
-      }
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [isDirty]);
 
   const saveTestimonials = async (updatedData) => {
     setSaving(true);
@@ -68,7 +57,7 @@ export default function TestimonialsAdmin() {
     if (deleteIndex === null) return;
     const newData = testimonials.filter((_, i) => i !== deleteIndex);
     setTestimonials(newData);
-    setIsDirty(true);
+    saveTestimonials(newData);
     setDeleteIndex(null);
   };
 

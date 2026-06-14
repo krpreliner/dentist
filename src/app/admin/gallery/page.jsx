@@ -11,24 +11,13 @@ export default function GalleryAdmin() {
   const [deleteIndex, setDeleteIndex] = useState(null);
 
   useEffect(() => {
-    fetch('/api/data/gallery')
+    fetch(`/api/data/gallery?t=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
         if (Array.isArray(json)) setGallery(json);
       })
       .catch(err => console.error(err));
   }, []);
-
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      if (isDirty) {
-        e.preventDefault();
-        e.returnValue = '';
-      }
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [isDirty]);
 
   const saveGallery = async (updatedData) => {
     setSaving(true);
@@ -80,7 +69,10 @@ export default function GalleryAdmin() {
       const data = await res.json();
       
       if (data.success) {
-        handleChange(index, field, data.url);
+        const newData = [...gallery];
+        newData[index] = { ...newData[index], [field]: data.url };
+        setGallery(newData);
+        saveGallery(newData);
       } else {
         alert(`Upload failed: ${data.error || 'Unknown error'}`);
       }
@@ -94,7 +86,7 @@ export default function GalleryAdmin() {
     if (deleteIndex === null) return;
     const newData = gallery.filter((_, i) => i !== deleteIndex);
     setGallery(newData);
-    setIsDirty(true);
+    saveGallery(newData);
     setDeleteIndex(null);
   };
 

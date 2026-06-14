@@ -9,24 +9,13 @@ export default function ContactAdmin() {
   const [isDirty, setIsDirty] = useState(false);
 
   useEffect(() => {
-    fetch('/api/data/contact')
+    fetch(`/api/data/contact?t=${Date.now()}`)
       .then(res => res.json())
       .then(json => {
         if (json && Object.keys(json).length > 0) setData(json);
       })
       .catch(err => console.error(err));
   }, []);
-
-  useEffect(() => {
-    const handleBeforeUnload = (e) => {
-      if (isDirty) {
-        e.preventDefault();
-        e.returnValue = '';
-      }
-    };
-    window.addEventListener('beforeunload', handleBeforeUnload);
-    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
-  }, [isDirty]);
 
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });

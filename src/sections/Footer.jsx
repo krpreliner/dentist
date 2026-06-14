@@ -1,12 +1,19 @@
+"use client";
 import React from 'react';
 import { FaFacebookF, FaInstagram, FaTwitter, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock } from 'react-icons/fa';
 import './Footer.css';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import contactData from '../../data/contact.json';
 
 const Footer = () => {
+  const pathname = usePathname();
   const contact = contactData;
+
+  if (pathname && pathname.startsWith('/admin')) {
+    return null;
+  }
 
   return (
     <footer className="footer bg-primary">

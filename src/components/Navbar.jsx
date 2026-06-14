@@ -11,6 +11,10 @@ const Navbar = () => {
   const pathname = usePathname();
   const contact = contactData;
 
+  if (pathname && pathname.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <nav className="navbar glass-dark">
       <div className="container flex-between">

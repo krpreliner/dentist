@@ -62,8 +62,11 @@ export default function AdminLogin() {
             <input 
               type="text" 
               value={username}
-              onChange={(e) => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value.trim().toLowerCase())}
               required
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck="false"
               style={{ width: '100%', padding: '0.875rem 1rem', borderRadius: '0.5rem', border: '1px solid #E2E8F0', outline: 'none', transition: 'all 0.2s', backgroundColor: '#F8FAFC', color: '#0F172A' }}
               placeholder="Enter your username"
               onFocus={(e) => { e.target.style.borderColor = '#0EA5E9'; e.target.style.backgroundColor = '#ffffff'; e.target.style.boxShadow = '0 0 0 3px rgba(14, 165, 233, 0.1)'; }}

@@ -54,7 +54,7 @@ export default function ContactAdmin() {
       )}
 
       <div className="admin-card animate-slide-in">
-        <form onSubmit={handleSave} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+        <form onSubmit={handleSave} className="admin-grid-contact" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
           <div className="admin-form-group">
             <label className="admin-label">Phone Number</label>
             <input type="text" placeholder="+91 1234567890" name="phone" value={data.phone || ''} onChange={handleChange} className="admin-input" />

@@ -77,7 +77,7 @@ export default function TestimonialsAdmin() {
         </div>
       )}
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
+      <div className="admin-grid-testimonials" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
         {testimonials.map((item, index) => (
           <div key={index} className="data-item-card animate-slide-in" style={{ animationDelay: `${index * 0.05}s` }}>
             <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>

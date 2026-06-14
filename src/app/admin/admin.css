@@ -25,6 +25,10 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   background-color: var(--admin-bg);
@@ -225,6 +229,10 @@ body {
 .admin-content {
   padding: 2rem;
   flex: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .admin-page-header {
@@ -390,6 +398,32 @@ body {
   color: white;
 }
 
+.btn-secondary {
+  background: white;
+  color: var(--admin-primary);
+  border: 1px solid var(--admin-primary);
+  padding: 0.875rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  background: var(--admin-primary-light);
+}
+
+.admin-btn-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
 /* Data List Items (Cards within CRUD) */
 .data-item-card {
   background: white;
@@ -517,7 +551,7 @@ body {
   }
   
   .admin-card {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
   
   .data-item-card {
@@ -525,7 +559,7 @@ body {
   }
   
   .admin-page-title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
   
   .admin-page-header {
@@ -534,6 +568,15 @@ body {
     gap: 1rem;
   }
   
+  .admin-btn-group {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .admin-btn-group button {
+    width: 100%;
+  }
+
   .admin-page-header > div:last-child {
     width: 100%;
     justify-content: stretch;

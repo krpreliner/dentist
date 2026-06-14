@@ -6,6 +6,7 @@ export default function SeoAdmin() {
   const [data, setData] = useState({ title: '', description: '', keywords: '' });
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState('');
+  const [isDirty, setIsDirty] = useState(false);
 
   useEffect(() => {
     fetch('/api/data/seo')
@@ -16,8 +17,20 @@ export default function SeoAdmin() {
       .catch(err => console.error(err));
   }, []);
 
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      if (isDirty) {
+        e.preventDefault();
+        e.returnValue = '';
+      }
+    };
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, [isDirty]);
+
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
+    setIsDirty(true);
   };
 
   const handleSave = async (e) => {
@@ -30,8 +43,13 @@ export default function SeoAdmin() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data),
       });
-      if (res.ok) setMessage('Saved successfully!');
-      else setMessage('Failed to save.');
+      if (res.ok) {
+        setMessage('Saved successfully!');
+        setIsDirty(false);
+        setTimeout(() => setMessage(''), 3000);
+      } else {
+        setMessage('Failed to save.');
+      }
     } catch (err) {
       setMessage('Error saving data.');
     }
@@ -44,6 +62,11 @@ export default function SeoAdmin() {
         <div>
           <h1 className="admin-page-title">SEO Settings</h1>
           <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem', marginBottom: 0 }}>Optimize your website's search engine visibility.</p>
+        </div>
+        <div className="admin-btn-group">
+          <button onClick={handleSave} className="btn-primary" disabled={saving || !isDirty}>
+            {saving ? 'Saving...' : 'Save SEO Settings'}
+          </button>
         </div>
       </div>
 
@@ -70,12 +93,6 @@ export default function SeoAdmin() {
           <div className="admin-form-group" style={{ marginBottom: 0 }}>
             <label className="admin-label">Keywords (comma separated)</label>
             <input type="text" placeholder="dentist, dental clinic, teeth whitening" name="keywords" value={data.keywords || ''} onChange={handleChange} className="admin-input" />
-          </div>
-          
-          <div style={{ marginTop: '1rem', borderTop: '1px solid var(--admin-border)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'flex-end' }}>
-            <button type="submit" className="btn-primary" disabled={saving}>
-              {saving ? 'Saving...' : 'Save SEO Settings'}
-            </button>
           </div>
         </form>
       </div>

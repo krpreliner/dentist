@@ -88,9 +88,9 @@ export default function AdminDashboard() {
         <p style={{ color: 'var(--admin-text-muted)', marginBottom: '1.5rem' }}>
           Select a module from the sidebar to manage your website content. All changes made in the admin panel are saved instantly and reflected live on the website.
         </p>
-        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+        <div className="admin-btn-group">
           <a href="/admin/services" className="btn-primary" style={{ textDecoration: 'none' }}>+ Add Service</a>
-          <a href="/admin/gallery" className="btn-primary" style={{ textDecoration: 'none', background: 'white', color: 'var(--admin-primary)', border: '1px solid var(--admin-primary)', boxShadow: 'none' }}>+ Upload Image</a>
+          <a href="/admin/gallery" className="btn-secondary" style={{ textDecoration: 'none' }}>+ Upload Image</a>
         </div>
       </div>
     </div>

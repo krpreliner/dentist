@@ -2,6 +2,7 @@ import Hero from '../sections/Hero';
 import TrustBar from '../sections/TrustBar';
 import WhyChooseUs from '../sections/WhyChooseUs';
 import Services from '../sections/Services';
+import BeforeAfterGallery from '../sections/BeforeAfterGallery';
 import Testimonials from '../sections/Testimonials';
 import MapSection from '../sections/MapSection';
 import BookingSection from '../sections/BookingSection';
@@ -14,6 +15,9 @@ export const revalidate = 0;
 export default async function Home() {
   const testimonialsData = await fetchJsonDataFromGit('testimonials');
   const testimonials = testimonialsData || [];
+  
+  const galleryData = await fetchJsonDataFromGit('gallery');
+  const gallery = galleryData || [];
 
   return (
     <main>
@@ -21,6 +25,7 @@ export default async function Home() {
       <TrustBar />
       <WhyChooseUs />
       <Services />
+      <BeforeAfterGallery items={gallery} />
       <Testimonials initialReviews={testimonials} />
       <MapSection compact={true} />
       <BookingSection />

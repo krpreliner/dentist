@@ -50,33 +50,48 @@ export default function AdminDashboard() {
     { title: 'Gallery Images', value: stats.gallery, icon: <FaImage />, color: '#e74c3c' },
   ];
 
-  if (loading) return <p>Loading dashboard...</p>;
+  if (loading) return (
+    <div style={{ display: 'flex', justifyContent: 'center', padding: '4rem' }}>
+      <div style={{ color: 'var(--admin-primary)', fontSize: '1.2rem', fontWeight: '500', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <div style={{ width: '24px', height: '24px', border: '3px solid', borderTopColor: 'transparent', borderRadius: '50%', animation: 'spin 1s linear infinite' }}></div>
+        Loading your dashboard...
+        <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
+      </div>
+    </div>
+  );
 
   return (
     <div>
       <div className="admin-page-header">
-        <h1 className="admin-page-title">Dashboard Overview</h1>
+        <div>
+          <h1 className="admin-page-title">Welcome back, Dr. Ruchi 👋</h1>
+          <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem', marginBottom: 0 }}>Here is an overview of your website's content.</p>
+        </div>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '1.5rem', marginBottom: '2rem' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '1.5rem', marginBottom: '3rem' }}>
         {statCards.map((stat, index) => (
-          <div key={index} className="admin-card" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
-            <div style={{ backgroundColor: stat.color + '20', color: stat.color, padding: '1rem', borderRadius: '50%', fontSize: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div key={index} className="admin-stat-card animate-slide-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div className="admin-stat-icon-wrapper" style={{ backgroundColor: stat.color + '15', color: stat.color }}>
               {stat.icon}
             </div>
             <div>
-              <h3 style={{ margin: 0, fontSize: '2rem', color: 'var(--admin-primary)' }}>{stat.value}</h3>
-              <p style={{ margin: 0, color: 'var(--admin-text-light)', fontSize: '0.9rem' }}>{stat.title}</p>
+              <h3 className="admin-stat-value">{stat.value}</h3>
+              <p className="admin-stat-label">{stat.title}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="admin-card">
-        <h2 style={{ marginTop: 0, color: 'var(--admin-primary)' }}>Welcome to Radiance CMS</h2>
-        <p style={{ color: 'var(--admin-text-light)' }}>
+      <div className="admin-card animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <h2 style={{ marginTop: 0, color: 'var(--admin-text-main)', fontSize: '1.25rem' }}>Quick Actions</h2>
+        <p style={{ color: 'var(--admin-text-muted)', marginBottom: '1.5rem' }}>
           Select a module from the sidebar to manage your website content. All changes made in the admin panel are saved instantly and reflected live on the website.
         </p>
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+          <a href="/admin/services" className="btn-primary" style={{ textDecoration: 'none' }}>+ Add Service</a>
+          <a href="/admin/gallery" className="btn-primary" style={{ textDecoration: 'none', background: 'white', color: 'var(--admin-primary)', border: '1px solid var(--admin-primary)', boxShadow: 'none' }}>+ Upload Image</a>
+        </div>
       </div>
     </div>
   );

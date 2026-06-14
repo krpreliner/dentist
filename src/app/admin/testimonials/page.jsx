@@ -40,7 +40,7 @@ export default function TestimonialsAdmin() {
 
   const handleChange = (index, field, value) => {
     const newData = [...testimonials];
-    newData[index][field] = value;
+    newData[index] = { ...newData[index], [field]: value };
     setTestimonials(newData);
   };
 
@@ -55,31 +55,64 @@ export default function TestimonialsAdmin() {
   };
 
   return (
-    <div className="admin-card">
-      <h1 className="admin-page-header">Manage Testimonials</h1>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <div className="animate-fade-in">
+      <div className="admin-page-header">
+        <div>
+          <h1 className="admin-page-title">Manage Testimonials</h1>
+          <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem', marginBottom: 0 }}>Manage patient reviews and ratings displayed on your site.</p>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+          <button onClick={handleAdd} className="btn-primary" style={{ background: 'white', color: 'var(--admin-primary)', border: '1px solid var(--admin-primary)', boxShadow: 'none' }}>
+            + Add New Testimonial
+          </button>
+          <button onClick={handleSaveAll} className="btn-primary" disabled={saving}>
+            {saving ? 'Saving...' : 'Save All Changes'}
+          </button>
+        </div>
+      </div>
+
+      {message && (
+        <div className={`admin-toast ${message.includes('success') ? 'success' : 'error'}`} style={{ marginBottom: '1.5rem' }}>
+          {message}
+        </div>
+      )}
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(350px, 1fr))', gap: '1.5rem' }}>
         {testimonials.map((item, index) => (
-          <div key={index} style={{ border: '1px solid #ccc', padding: '1rem', borderRadius: '4px' }}>
-            <div style={{ marginBottom: '0.5rem' }}>
-              <label>Name</label>
-              <input type="text" value={item.name || ''} onChange={(e) => handleChange(index, 'name', e.target.value)} className="admin-input" />
+          <div key={index} className="data-item-card animate-slide-in" style={{ animationDelay: `${index * 0.05}s` }}>
+            <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+              <button onClick={() => handleDelete(index)} className="btn-danger" style={{ padding: '0.25rem 0.75rem', fontSize: '0.8rem' }}>Delete</button>
             </div>
-            <div style={{ marginBottom: '0.5rem' }}>
-              <label>Rating (1-5)</label>
-              <input type="number" min="1" max="5" value={item.rating || 5} onChange={(e) => handleChange(index, 'rating', parseInt(e.target.value))} className="admin-input" />
+            
+            <div className="admin-form-group" style={{ marginTop: '1.5rem' }}>
+              <label className="admin-label">Patient Name</label>
+              <input type="text" placeholder="e.g. John Doe" value={item.name || ''} onChange={(e) => handleChange(index, 'name', e.target.value)} className="admin-input" />
             </div>
-            <div style={{ marginBottom: '0.5rem' }}>
-              <label>Review</label>
-              <textarea value={item.review || ''} onChange={(e) => handleChange(index, 'review', e.target.value)} className="admin-input" rows={3}></textarea>
+
+            <div className="admin-form-group">
+              <label className="admin-label">Rating (1-5)</label>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                <input type="number" min="1" max="5" value={item.rating || 5} onChange={(e) => handleChange(index, 'rating', parseInt(e.target.value))} className="admin-input" style={{ width: '100px' }} />
+                <div style={{ color: '#F59E0B', fontSize: '1.25rem', display: 'flex', gap: '0.25rem' }}>
+                   {Array.from({ length: 5 }).map((_, i) => (
+                     <span key={i} style={{ opacity: i < (item.rating || 5) ? 1 : 0.3 }}>★</span>
+                   ))}
+                </div>
+              </div>
             </div>
-            <button onClick={() => handleDelete(index)} style={{ background: 'red', color: 'white', border: 'none', padding: '0.5rem', cursor: 'pointer' }}>Delete</button>
+
+            <div className="admin-form-group">
+              <label className="admin-label">Review</label>
+              <textarea placeholder="What did the patient say?" value={item.review || ''} onChange={(e) => handleChange(index, 'review', e.target.value)} className="admin-textarea" rows={4}></textarea>
+            </div>
           </div>
         ))}
-        <button onClick={handleAdd} style={{ padding: '0.5rem', cursor: 'pointer' }}>+ Add Testimonial</button>
-        <button onClick={handleSaveAll} className="btn-primary" disabled={saving}>
-          {saving ? 'Saving...' : 'Save All Testimonials'}
-        </button>
-        {message && <p>{message}</p>}
+
+        <div className="upload-area animate-slide-in" onClick={handleAdd} style={{ animationDelay: `${testimonials.length * 0.05}s`, minHeight: '350px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+           <div style={{ fontSize: '3rem', color: 'var(--admin-primary)', marginBottom: '1rem' }}>+</div>
+           <h3 style={{ margin: 0, color: 'var(--admin-text-main)' }}>Add New Testimonial</h3>
+           <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem' }}>Create a blank review card</p>
+        </div>
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ export default function AdminLayout({ children }) {
     <div className="admin-layout">
       {/* Mobile Header */}
       <div className="admin-mobile-header">
-        <div className="admin-logo">🦷 Radiance CMS</div>
+        <div className="admin-logo">🦷 Radiance</div>
         <button className="admin-menu-btn" onClick={() => setSidebarOpen(!isSidebarOpen)}>
           {isSidebarOpen ? <FaTimes /> : <FaBars />}
         </button>
@@ -44,7 +44,7 @@ export default function AdminLayout({ children }) {
       {/* Sidebar Navigation */}
       <aside className={`admin-sidebar ${isSidebarOpen ? 'open' : ''}`}>
         <div className="admin-sidebar-header">
-          <div className="admin-logo">🦷 Radiance CMS</div>
+          <div className="admin-logo">🦷 Radiance</div>
         </div>
         
         <nav className="admin-nav">
@@ -73,7 +73,21 @@ export default function AdminLayout({ children }) {
 
       {/* Main Content Area */}
       <main className="admin-main">
-        {children}
+        {/* Top Sticky Header */}
+        <header className="admin-top-header">
+          <div className="admin-breadcrumb">
+            Admin Panel <span style={{ margin: '0 0.5rem', color: 'var(--admin-border)' }}>/</span> 
+            <span style={{ color: 'var(--admin-primary)' }}>{navItems.find(i => i.path === pathname)?.name || 'Settings'}</span>
+          </div>
+          <div className="admin-user-profile">
+            <span style={{ fontWeight: '500', fontSize: '0.95rem' }}>Dr. Ruchi Jain</span>
+            <div className="admin-avatar">RJ</div>
+          </div>
+        </header>
+
+        <div className="admin-content animate-fade-in">
+          {children}
+        </div>
       </main>
       
       {/* Overlay for mobile sidebar */}

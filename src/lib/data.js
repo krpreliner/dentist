@@ -29,11 +29,13 @@ export async function saveJsonData(model, data) {
     throw new Error('Invalid model');
   }
 
+  let localSaveSuccess = false;
   // 1. Save locally for instant updates (works immediately on localhost and current Lambda instance)
   try {
     const filePath = path.join(dataDir, `${model}.json`);
     const jsonString = JSON.stringify(data, null, 2);
     fs.writeFileSync(filePath, jsonString, 'utf8');
+    localSaveSuccess = true;
   } catch (err) {
     // On Vercel, the file system is read-only. We silently ignore this local write error
     // because the next step will push it to GitHub permanently!
@@ -47,7 +49,11 @@ export async function saveJsonData(model, data) {
   const repo = process.env.GITHUB_REPO || 'dentist';
 
   if (!token) {
-    throw new Error('GITHUB_TOKEN is missing! If you are testing locally, add it to your .env.local file. If on Vercel, make sure you Redeployed!');
+    if (!localSaveSuccess) {
+       throw new Error('Save Failed: You are on Vercel (read-only file system) and GITHUB_TOKEN is missing!');
+    }
+    console.warn('GITHUB_TOKEN is missing! Local changes saved successfully, but not pushed to GitHub.');
+    return true;
   }
 
   try {

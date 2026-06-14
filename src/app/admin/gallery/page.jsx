@@ -46,37 +46,30 @@ export default function GalleryAdmin() {
 
   const handleChange = (index, field, value) => {
     const newData = [...gallery];
-    newData[index][field] = value;
+    newData[index] = { ...newData[index], [field]: value };
     setGallery(newData);
   };
 
   const handleImageUpload = async (index, field, file) => {
     if (!file) return;
     const formData = new FormData();
-    formData.append('image', file); // ImgBB requires the field to be named "image"
-
-    const apiKey = process.env.NEXT_PUBLIC_IMGBB_API_KEY;
-    if (!apiKey) {
-      alert('ImgBB API Key is missing. Please add NEXT_PUBLIC_IMGBB_API_KEY to Vercel.');
-      return;
-    }
+    formData.append('file', file);
 
     try {
-      const res = await fetch(`https://api.imgbb.com/1/upload?key=${apiKey}`, {
+      const res = await fetch('/api/upload', {
         method: 'POST',
         body: formData,
       });
       const data = await res.json();
       
       if (data.success) {
-        // ImgBB returns the URL in data.data.url
-        handleChange(index, field, data.data.url);
+        handleChange(index, field, data.url);
       } else {
-        alert(`Upload failed: ${data.error?.message || 'Unknown error'}`);
+        alert(`Upload failed: ${data.error || 'Unknown error'}`);
       }
     } catch (err) {
       console.error(err);
-      alert('Upload error');
+      alert('Error uploading file');
     }
   };
 
@@ -91,51 +84,91 @@ export default function GalleryAdmin() {
   };
 
   return (
-    <div className="admin-card">
-      <h1 className="admin-page-header">Manage Before/After Gallery</h1>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <div className="animate-fade-in">
+      <div className="admin-page-header">
+        <div>
+          <h1 className="admin-page-title">Manage Gallery</h1>
+          <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem', marginBottom: 0 }}>Add before/after photos of your patient cases.</p>
+        </div>
+        <div style={{ display: 'flex', gap: '1rem' }}>
+          <button onClick={handleAdd} className="btn-primary" style={{ background: 'white', color: 'var(--admin-primary)', border: '1px solid var(--admin-primary)', boxShadow: 'none' }}>
+            + Add New Case
+          </button>
+          <button onClick={handleSaveAll} className="btn-primary" disabled={saving}>
+            {saving ? 'Saving...' : 'Save All Changes'}
+          </button>
+        </div>
+      </div>
+
+      {message && (
+        <div className={`admin-toast ${message.includes('success') ? 'success' : 'error'}`} style={{ marginBottom: '1.5rem' }}>
+          {message}
+        </div>
+      )}
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(400px, 1fr))', gap: '1.5rem' }}>
         {gallery.map((item, index) => (
-          <div key={index} style={{ border: '1px solid #ccc', padding: '1rem', borderRadius: '4px' }}>
-            <div style={{ marginBottom: '0.5rem' }}>
-              <label>Case Title / Description</label>
-              <input type="text" value={item.title || ''} onChange={(e) => handleChange(index, 'title', e.target.value)} className="admin-input" />
+          <div key={index} className="data-item-card animate-slide-in" style={{ animationDelay: `${index * 0.05}s` }}>
+            <div style={{ position: 'absolute', top: '1rem', right: '1rem' }}>
+              <button onClick={() => handleDelete(index)} className="btn-danger" style={{ padding: '0.25rem 0.75rem', fontSize: '0.8rem' }}>Delete</button>
             </div>
-            <div style={{ display: 'flex', gap: '1rem', marginBottom: '0.5rem' }}>
-              <div style={{ flex: 1 }}>
-                <label>Before Image</label>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  {item.beforeImage && (
-                    <div style={{ position: 'relative' }}>
-                      <img src={item.beforeImage} alt="Before" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain', background: '#f5f5f5', borderRadius: '4px' }} />
-                      <button onClick={() => handleChange(index, 'beforeImage', '')} style={{ position: 'absolute', top: '4px', right: '4px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
+            
+            <div className="admin-form-group" style={{ marginTop: '1.5rem' }}>
+              <label className="admin-label">Case Title / Description</label>
+              <input type="text" placeholder="e.g. Invisalign Treatment" value={item.title || ''} onChange={(e) => handleChange(index, 'title', e.target.value)} className="admin-input" />
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '0.5rem' }}>
+              <div>
+                <label className="admin-label">Before Image</label>
+                {item.beforeImage ? (
+                  <div style={{ position: 'relative', marginTop: '0.5rem', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--admin-border)' }}>
+                    <img src={item.beforeImage} alt="Before" style={{ width: '100%', height: '140px', objectFit: 'cover', display: 'block' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)', display: 'flex', alignItems: 'flex-end', padding: '1rem' }}>
+                       <button onClick={() => handleChange(index, 'beforeImage', '')} className="btn-danger" style={{ width: '100%', padding: '0.4rem', fontSize: '0.8rem' }}>Remove</button>
                     </div>
-                  )}
-                  <input type="text" placeholder="Or Paste Before Image URL..." value={item.beforeImage || ''} onChange={(e) => handleChange(index, 'beforeImage', e.target.value)} className="admin-input" />
-                  <input type="file" onChange={(e) => handleImageUpload(index, 'beforeImage', e.target.files[0])} />
-                </div>
+                  </div>
+                ) : (
+                  <div className="upload-area" style={{ padding: '1rem', minHeight: '140px' }}>
+                    <div style={{ fontSize: '1.5rem', color: 'var(--admin-primary)' }}>📸</div>
+                    <div style={{ textAlign: 'center' }}>
+                      <p style={{ margin: '0', fontSize: '0.85rem', fontWeight: '600' }}>Upload Before</p>
+                    </div>
+                    <input type="file" onChange={(e) => handleImageUpload(index, 'beforeImage', e.target.files[0])} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer' }} />
+                    <input type="text" placeholder="Or URL..." value={item.beforeImage || ''} onChange={(e) => handleChange(index, 'beforeImage', e.target.value)} className="admin-input" style={{ width: '100%', padding: '0.5rem', fontSize: '0.8rem' }} />
+                  </div>
+                )}
               </div>
-              <div style={{ flex: 1 }}>
-                <label>After Image</label>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                  {item.afterImage && (
-                    <div style={{ position: 'relative' }}>
-                      <img src={item.afterImage} alt="After" style={{ width: '100%', maxHeight: '150px', objectFit: 'contain', background: '#f5f5f5', borderRadius: '4px' }} />
-                      <button onClick={() => handleChange(index, 'afterImage', '')} style={{ position: 'absolute', top: '4px', right: '4px', background: 'red', color: 'white', border: 'none', borderRadius: '50%', width: '24px', height: '24px', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '12px' }}>✕</button>
+              
+              <div>
+                <label className="admin-label">After Image</label>
+                {item.afterImage ? (
+                  <div style={{ position: 'relative', marginTop: '0.5rem', borderRadius: 'var(--radius-md)', overflow: 'hidden', border: '1px solid var(--admin-border)' }}>
+                    <img src={item.afterImage} alt="After" style={{ width: '100%', height: '140px', objectFit: 'cover', display: 'block' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)', display: 'flex', alignItems: 'flex-end', padding: '1rem' }}>
+                       <button onClick={() => handleChange(index, 'afterImage', '')} className="btn-danger" style={{ width: '100%', padding: '0.4rem', fontSize: '0.8rem' }}>Remove</button>
                     </div>
-                  )}
-                  <input type="text" placeholder="Or Paste After Image URL..." value={item.afterImage || ''} onChange={(e) => handleChange(index, 'afterImage', e.target.value)} className="admin-input" />
-                  <input type="file" onChange={(e) => handleImageUpload(index, 'afterImage', e.target.files[0])} />
-                </div>
+                  </div>
+                ) : (
+                  <div className="upload-area" style={{ padding: '1rem', minHeight: '140px' }}>
+                    <div style={{ fontSize: '1.5rem', color: 'var(--admin-secondary)' }}>✨</div>
+                    <div style={{ textAlign: 'center' }}>
+                      <p style={{ margin: '0', fontSize: '0.85rem', fontWeight: '600' }}>Upload After</p>
+                    </div>
+                    <input type="file" onChange={(e) => handleImageUpload(index, 'afterImage', e.target.files[0])} style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', opacity: 0, cursor: 'pointer' }} />
+                    <input type="text" placeholder="Or URL..." value={item.afterImage || ''} onChange={(e) => handleChange(index, 'afterImage', e.target.value)} className="admin-input" style={{ width: '100%', padding: '0.5rem', fontSize: '0.8rem' }} />
+                  </div>
+                )}
               </div>
             </div>
-            <button onClick={() => handleDelete(index)} style={{ background: 'red', color: 'white', border: 'none', padding: '0.5rem', cursor: 'pointer', marginTop: '0.5rem' }}>Delete Case</button>
           </div>
         ))}
-        <button onClick={handleAdd} style={{ padding: '0.5rem', cursor: 'pointer' }}>+ Add Gallery Case</button>
-        <button onClick={handleSaveAll} className="btn-primary" disabled={saving}>
-          {saving ? 'Saving...' : 'Save All Gallery Cases'}
-        </button>
-        {message && <p>{message}</p>}
+
+        <div className="upload-area animate-slide-in" onClick={handleAdd} style={{ animationDelay: `${gallery.length * 0.05}s`, minHeight: '350px', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+           <div style={{ fontSize: '3rem', color: 'var(--admin-primary)', marginBottom: '1rem' }}>+</div>
+           <h3 style={{ margin: 0, color: 'var(--admin-text-main)' }}>Add New Case</h3>
+           <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem' }}>Create a blank gallery entry</p>
+        </div>
       </div>
     </div>
   );

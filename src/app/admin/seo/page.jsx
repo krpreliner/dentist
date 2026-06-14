@@ -39,26 +39,46 @@ export default function SeoAdmin() {
   };
 
   return (
-    <div className="admin-card">
-      <h1 className="admin-page-header">SEO Settings</h1>
-      <form onSubmit={handleSave} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <div className="animate-fade-in">
+      <div className="admin-page-header">
         <div>
-          <label>Global Site Title</label>
-          <input type="text" name="title" value={data.title || ''} onChange={handleChange} className="admin-input" />
+          <h1 className="admin-page-title">SEO Settings</h1>
+          <p style={{ color: 'var(--admin-text-muted)', marginTop: '0.5rem', marginBottom: 0 }}>Optimize your website's search engine visibility.</p>
         </div>
-        <div>
-          <label>Meta Description</label>
-          <textarea name="description" value={data.description || ''} onChange={handleChange} className="admin-input" rows={3}></textarea>
+      </div>
+
+      {message && (
+        <div className={`admin-toast ${message.includes('success') ? 'success' : 'error'}`} style={{ marginBottom: '1.5rem' }}>
+          {message}
         </div>
-        <div>
-          <label>Keywords (comma separated)</label>
-          <input type="text" name="keywords" value={data.keywords || ''} onChange={handleChange} className="admin-input" />
-        </div>
-        <button type="submit" className="btn-primary" disabled={saving}>
-          {saving ? 'Saving...' : 'Save SEO Settings'}
-        </button>
-        {message && <p>{message}</p>}
-      </form>
+      )}
+
+      <div className="admin-card animate-slide-in">
+        <form onSubmit={handleSave} style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem' }}>
+          <div className="admin-form-group" style={{ marginBottom: 0 }}>
+            <label className="admin-label">Global Site Title</label>
+            <input type="text" placeholder="e.g. Radiance Dentistry | Best Dental Clinic" name="title" value={data.title || ''} onChange={handleChange} className="admin-input" />
+            <p style={{ fontSize: '0.8rem', color: 'var(--admin-text-muted)', marginTop: '0.5rem' }}>This title appears in browser tabs and search engine results.</p>
+          </div>
+          
+          <div className="admin-form-group" style={{ marginBottom: 0 }}>
+            <label className="admin-label">Meta Description</label>
+            <textarea name="description" placeholder="A brief summary of your clinic..." value={data.description || ''} onChange={handleChange} className="admin-textarea" rows={3}></textarea>
+            <p style={{ fontSize: '0.8rem', color: 'var(--admin-text-muted)', marginTop: '0.5rem' }}>Keep it between 150-160 characters for best SEO results.</p>
+          </div>
+          
+          <div className="admin-form-group" style={{ marginBottom: 0 }}>
+            <label className="admin-label">Keywords (comma separated)</label>
+            <input type="text" placeholder="dentist, dental clinic, teeth whitening" name="keywords" value={data.keywords || ''} onChange={handleChange} className="admin-input" />
+          </div>
+          
+          <div style={{ marginTop: '1rem', borderTop: '1px solid var(--admin-border)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'flex-end' }}>
+            <button type="submit" className="btn-primary" disabled={saving}>
+              {saving ? 'Saving...' : 'Save SEO Settings'}
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

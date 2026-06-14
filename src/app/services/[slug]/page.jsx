@@ -4,7 +4,7 @@ import Testimonials from '../../../sections/Testimonials';
 import BookingSection from '../../../sections/BookingSection';
 import { FaCheckCircle } from 'react-icons/fa';
 
-import { fetchJsonDataFromGit } from '../../../../lib/fetchData';
+import { fetchJsonDataFromGit } from '../../../lib/fetchData';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

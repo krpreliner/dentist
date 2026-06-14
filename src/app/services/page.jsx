@@ -6,6 +6,9 @@ export const metadata = {
   description: 'Explore our world-class dental treatments in Surat, including Dental Implants, Root Canal, Teeth Whitening, and more.',
 };
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function ServicesPage() {
   return (
     <main>

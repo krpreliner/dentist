@@ -78,7 +78,7 @@ export default function AdminLogin() {
             <input 
               type="password" 
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value.trim())}
               required
               style={{ width: '100%', padding: '0.875rem 1rem', borderRadius: '0.5rem', border: '1px solid #E2E8F0', outline: 'none', transition: 'all 0.2s', backgroundColor: '#F8FAFC', color: '#0F172A' }}
               placeholder="Enter your password"
